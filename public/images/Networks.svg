@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="200" height="200" viewBox="0 0 200 200">
+  <!-- Wobbly spokes -->
+  <g stroke="#000" stroke-width="12" stroke-linecap="round">
+    <line x1="100" y1="100" x2=" 95"  y2=" 20"/>  <!-- Up, a bit left -->
+    <line x1="100" y1="100" x2="165"  y2=" 55"/>  <!-- Upper‑right, shorter -->
+    <line x1="100" y1="100" x2="150"  y2="150"/>  <!-- Lower‑right, skewed -->
+    <line x1="100" y1="100" x2=" 85"  y2="175"/>  <!-- Down, a bit left -->
+    <line x1="100" y1="100" x2=" 30"  y2="135"/>  <!-- Lower‑left -->
+    <line x1="100" y1="100" x2=" 40"  y2=" 60"/>  <!-- Upper‑left, inward -->
+  </g>
+
+  <!-- Central hub -->
+  <circle cx="100" cy="100" r="20" fill="#000"/>
+
+  <!-- Irregular outer nodes -->
+  <g fill="#000">
+    <circle cx=" 95"  cy=" 20"  r="12"/>  <!-- top left node -->
+    <circle cx="165"  cy=" 55"  r="16"/>  <!-- upper right node -->
+    <circle cx="150"  cy="150" r="14"/>  <!-- lower right node -->
+    <circle cx=" 85"  cy="175" r="10"/>  <!-- bottom node -->
+    <circle cx=" 30"  cy="135" r="18"/>  <!-- lower left node -->
+    <circle cx=" 40"  cy=" 60"  r="13"/>  <!-- upper left node -->
+  </g>
+</svg>

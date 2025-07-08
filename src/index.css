@@ -1,0 +1,865 @@
+/* ============================================================================
+   MAIN CSS FILE - Global Styles and Component Styling
+   ============================================================================
+   This file contains all the styling for the portfolio website
+   Includes: Global styles, component classes, animations, responsive design
+*/
+
+/* ============================================================================
+   FONT IMPORTS AND TAILWIND SETUP
+   ============================================================================ */
+
+/* Import Mona Sans font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+/* Import Tailwind CSS framework */
+@import "tailwindcss";
+
+/* ============================================================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   ============================================================================ */
+
+:root {
+  /* Gradient used for card hover effects and glows */
+  --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
+}
+
+/* ============================================================================
+   GLOBAL HTML AND BODY STYLES
+   ============================================================================ */
+
+html,
+body {
+  width: 100dvw; /* Use dynamic viewport width for mobile browsers */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  background-color: black; /* Dark theme background */
+  color: white; /* Light text color */
+  scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+  font-family: "Mona Sans", sans-serif; /* Primary font family */
+}
+
+/* ============================================================================
+   SECTION AND ANCHOR STYLES
+   ============================================================================ */
+
+section {
+  width: 100dvw; /* Full viewport width for all sections */
+}
+
+[id] {
+  /* Add scroll margin to account for fixed navbar height */
+  /* Ensures smooth scrolling doesn't hide content behind navbar */
+  scroll-margin-top: 120px; /* Adjust 80px to match your navbar height */
+}
+
+/* ============================================================================
+   TAILWIND THEME CONFIGURATION
+   ============================================================================ */
+
+@theme {
+  /* Custom font family for Tailwind */
+  --font-sans: "Mona Sans", sans-serif;
+  
+  /* Custom color palette for the portfolio */
+  --color-white-50: #afa9d3; /* Muted white/gray for secondary text */
+  --color-black-50: #1c1c21; /* Dark gray for cards and borders */
+  --color-black-100: #0e0e10; /* Very dark gray for backgrounds */
+  --color-black-200: #282732; /* Medium dark gray for components */
+  --color-blue-50: #839cb5; /* Muted blue for form elements */
+  --color-blue-100: #2d2d38; /* Dark blue for form backgrounds */
+}
+
+/* ============================================================================
+   UTILITY CLASSES
+   ============================================================================ */
+
+@layer utilities {
+  /* Center content both horizontally and vertically */
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  /* Center content in a column layout */
+  .flex-col-center {
+    @apply flex flex-col justify-center items-center;
+  }
+}
+
+/* ============================================================================
+   COMPONENT STYLES
+   ============================================================================ */
+
+@layer components {
+  /* ============================================================================
+     RESPONSIVE PADDING UTILITIES
+     ============================================================================ */
+  
+  /* Standard horizontal padding (smaller on mobile) */
+  .padding-x {
+    @apply px-5 md:px-10;
+  }
+
+  /* Large horizontal padding (more space on desktop) */
+  .padding-x-lg {
+    @apply px-5 md:px-20;
+  }
+
+  /* Section padding with responsive top margin */
+  .section-padding {
+    @apply px-5 md:px-10 md:mt-40 mt-20;
+  }
+
+  /* Responsive top margin (more space on mobile) */
+  .mt-responsive {
+    @apply xl:mt-20 md:mt-0 mt-40;
+  }
+
+  /* ============================================================================
+     GRID LAYOUT UTILITIES
+     ============================================================================ */
+  
+  /* Base single column grid */
+  .grid-base {
+    @apply grid grid-cols-1;
+  }
+
+  /* Two column responsive grid */
+  .grid-2-cols {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+  }
+
+  /* Three column responsive grid */
+  .grid-3-cols {
+    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6;
+  }
+
+  /* Tight three column grid for specific layouts */
+  .grid-3-cols-md-tight {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0;
+  }
+
+  /* Four column responsive grid */
+  .grid-4-cols {
+    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-7;
+  }
+
+  /* Twelve column grid for complex layouts */
+  .grid-12-cols {
+    @apply grid grid-cols-1 xl:grid-cols-12 gap-10;
+  }
+
+  /* ============================================================================
+     HERO SECTION STYLES
+     ============================================================================ */
+  
+  /* Main hero layout container */
+  .hero-layout {
+    @apply relative z-10 xl:mt-20 mt-32 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center;
+  }
+
+  /* Hero text styling with animated text slider */
+  .hero-text {
+    @apply flex flex-col justify-center md:text-[60px] text-[30px] font-semibold relative z-10 pointer-events-none;
+    /* Icon styling within hero text */
+    img {
+      @apply size-8 md:size-10 object-contain;
+    }
+    /* Animated text slider container */
+    .slide {
+      @apply absolute pt-0 px-2 md:px-5 py-[30px] h-[48px] md:h-[78px] md:translate-y-1 translate-y-0 overflow-hidden;
+    }
+  }
+
+  /* Badge styling for section headers */
+  .hero-badge {
+    @apply bg-black-200 py-2 px-4 rounded-full w-fit text-sm md:text-base text-nowrap;
+  }
+
+  /* 3D model container positioning */
+  .hero-3d-layout {
+    @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0;
+  }
+
+  /* ============================================================================
+     NAVIGATION BAR STYLES
+     ============================================================================ */
+  
+  /* Main navbar container with scroll-based styling */
+  .navbar {
+    @apply fixed w-full left-1/2 py-5 px-5 md:px-20 -translate-x-1/2 z-[100] transition-all duration-300 ease-in-out;
+
+    /* Styling when user has scrolled down */
+    &.scrolled {
+      @apply top-0 bg-black;
+    }
+
+    /* Styling when at top of page */
+    &.not-scrolled {
+      @apply md:top-10 top-0 bg-transparent;
+    }
+
+    /* Inner navbar content container */
+    .inner {
+      @apply mx-auto flex items-center justify-between;
+    }
+
+    /* Logo styling with hover effect */
+    .logo {
+      @apply text-white-50 text-lg md:text-xl font-semibold transition-transform duration-300 hover:scale-105;
+    }
+
+    /* Desktop navigation menu */
+    nav.desktop {
+      @apply hidden lg:flex items-center;
+
+      ul {
+        @apply flex space-x-8;
+
+        li {
+          @apply text-white-50 relative;
+
+          span {
+            @apply transition-colors duration-300 hover:text-white;
+          }
+
+          /* Animated underline on hover */
+          .underline {
+            @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full;
+          }
+        }
+      }
+    }
+
+    /* Contact button styling */
+    .contact-btn {
+      @apply flex;
+
+      .inner {
+        @apply px-5 py-2 rounded-lg bg-white text-black group-hover:bg-black-50 transition-colors duration-300;
+
+        span {
+          @apply group-hover:text-white transition-colors duration-300;
+        }
+      }
+    }
+  }
+
+  /* ============================================================================
+     PROJECT SHOWCASE STYLES
+     ============================================================================ */
+  
+  /* Main showcase container */
+  .app-showcase {
+     @apply w-full px-5 md:px-20 pt-10 md:pt-20 pb-0 md:pb-0 flex items-center justify-center;
+
+    /* Showcase layout container */
+    .showcaselayout {
+      @apply flex xl:flex-row flex-col gap-10 justify-between;
+    }
+
+    /* First project wrapper (larger project) */
+    .first-project-wrapper {
+      @apply h-full flex flex-col justify-between xl:w-[60%];
+
+      /* Image container for main project */
+      .image-wrapper {
+        @apply xl:h-[70vh] md:h-[50vh] h-96 relative;
+
+        img {
+          @apply w-full h-full object-cover rounded-xl absolute inset-0;
+        }
+      }
+
+      /* Text content for main project */
+      .text-content {
+        @apply space-y-5 mt-5;
+
+        /* Technology badges */
+        .badges {
+          @apply flex gap-2 mb-4;
+        }
+
+        h2 {
+          @apply text-2xl md:text-3xl lg:text-4xl font-bold;
+        }
+      }
+    }
+
+    /* Project list wrapper (smaller projects) */
+    .project-list-wrapper {
+      @apply flex md:flex-row flex-col xl:flex-col gap-10 xl:w-[40%];
+
+      /* Image container for smaller projects */
+      .image-wrapper {
+        @apply xl:h-[31vh] md:h-52 lg:h-72 h-64 relative rounded-xl xl:px-5 2xl:px-12 py-0;
+      }
+
+      img {
+        @apply w-full h-full object-contain rounded-xl;
+      }
+
+      h2 {
+        @apply text-lg md:text-xl lg:text-2xl font-semibold mt-5;
+      }
+    }
+  }
+
+  /* ============================================================================
+     CALL-TO-ACTION BUTTON STYLES
+     ============================================================================ */
+  
+  /* CTA button wrapper with hover effects */
+  .cta-wrapper {
+    @apply relative z-20 cursor-pointer;
+  }
+
+  /* Main CTA button container */
+  .cta-button {
+    @apply px-4 py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
+  }
+    
+  .cta-button:hover {
+    outline: 2px solid #afa9d3;
+    outline-offset: 2px;
+  }
+
+    /* Animated background circle that expands on hover */
+    .bg-circle {
+      @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
+        w-[120%] h-[120%] group-hover:size-10 group-hover:right-10
+        rounded-full bg-white-50 transition-all duration-500;
+    }
+
+    /* Button text with hover animation */
+    .text {
+      @apply uppercase md:text-lg text-black transition-all duration-500
+        group-hover:text-white-50 group-hover:-translate-x-5 xl:translate-x-0 -translate-x-5;
+    }
+
+    /* Arrow icon container with bounce animation */
+    .arrow-wrapper {
+      @apply group-hover:bg-white-50 size-10 rounded-full absolute right-10 top-1/2 
+        -translate-y-1/2 flex justify-center items-center overflow-hidden;
+
+      img {
+        @apply size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500;
+      }
+    }
+  }
+
+  /* ============================================================================
+     CARD AND COMPONENT STYLES
+     ============================================================================ */
+  
+  /* Card border styling */
+  .card-border {
+    @apply border border-black-50 bg-black-100;
+  }
+
+  /* Marquee item sizing */
+  .marquee-item {
+    @apply md:w-40 w-32;
+  }
+
+  /* ============================================================================
+     EXPERIENCE TIMELINE STYLES
+     ============================================================================ */
+  
+  /* Timeline wrapper positioning */
+  .timeline-wrapper {
+    @apply absolute top-0 xl:left-[35.5vw] md:left-10 left-5 h-full flex justify-center;
+  }
+
+  /* Main timeline line */
+  .timeline {
+    @apply absolute z-30 h-[110%] -top-10 w-14 md:w-28 bg-black;
+  }
+
+  /* Timeline logo circles */
+  .timeline-logo {
+    @apply md:size-20 size-10 flex-none rounded-full flex justify-center items-center md:-translate-y-7 border border-black-50 bg-black-100;
+  }
+
+  /* Experience card layout */
+  .exp-card-wrapper {
+    @apply flex flex-col-reverse xl:flex-row xl:gap-20 gap-10 justify-between;
+  }
+
+  /* ============================================================================
+     GRADIENT AND VISUAL EFFECTS
+     ============================================================================ */
+  
+  /* Gradient edge for fade effects */
+  .gradient-edge {
+    @apply w-36 h-full absolute bottom-0 z-20;
+  }
+
+  /* ============================================================================
+     TECH STACK CARD STYLES
+     ============================================================================ */
+  
+  /* Animated background for tech cards */
+  .tech-card-animated-bg {
+    @apply absolute left-0 bottom-[-100%] w-full h-full bg-[#2D3240] group-hover:bottom-0 transition-all duration-700;
+  }
+
+  /* Tech card content styling */
+  .tech-card-content {
+    @apply flex flex-col md:justify-center items-center xl:gap-5 xl:h-[50vh] overflow-hidden relative z-10 group-hover:cursor-grab;
+
+    & p {
+      @apply text-lg 2xl:text-2xl pb-5 xl:pb-0 font-semibold text-white-50 text-center;
+    }
+  }
+
+  /* Tech grid layout */
+  .tech-grid {
+    @apply grid xl:grid-cols-5 md:grid-cols-3 grid-cols-1 xl:gap-16 md:gap-10 gap-5 mt-16;
+  }
+
+  /* Tech icon wrapper */
+  .tech-icon-wrapper {
+    @apply flex justify-center items-center w-52 h-60 relative;
+  }
+
+  /* ============================================================================
+     FORM STYLES
+     ============================================================================ */
+  
+  form {
+    label {
+      @apply block text-white-50 mb-2;
+    }
+
+    input,
+    textarea {
+      @apply w-full px-4 py-4 md:text-base text-sm placeholder:text-blue-50 bg-blue-100 rounded-md;
+    }
+
+    a {
+      @apply w-full py-4 bg-white text-black font-semibold rounded-md flex justify-center items-center gap-2;
+
+      img {
+        @apply inline-block;
+      }
+    }
+  }
+
+  /* ============================================================================
+     FOOTER STYLES
+     ============================================================================ */
+  
+  .footer {
+    @apply my-10 md:mt-20 mt-10 text-white-50 px-5 md:px-20 xl:px-20 flex items-center justify-center;
+
+    .footer-container {
+      @apply grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 w-full;
+    }
+
+    p {
+      @apply text-center md:text-start cursor-pointer;
+    }
+
+    .socials {
+      @apply flex items-center justify-center gap-5;
+
+      .icon {
+        @apply border border-black-50 bg-black-100 flex justify-center items-center rounded-xl size-10 md:size-12 cursor-pointer transition-all duration-500 hover:bg-black-50;
+      }
+
+      img {
+        @apply inline-block;
+      }
+    }
+  }
+
+
+/* ============================================================================
+   HERO TEXT SLIDER ANIMATION
+   ============================================================================
+   This creates the animated text slider in the hero section
+   Words cycle through vertically with smooth transitions
+*/
+
+/* Text slider container */
+.slide {
+  display: inline-block;
+  flex-direction: column;
+  transition: all cubic-bezier(0.71, 0.03, 0.34, 1);
+}
+
+/* Wrapper that moves to show different words */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  animation: wordSlider 21s infinite cubic-bezier(0.9, 0.01, 0.3, 0.99);
+}
+
+/* Keyframe animation for word cycling */
+@keyframes wordSlider {
+  0% {
+    transform: translateY(0.5%);
+  }
+  12.5% {
+    transform: translateY(-12.5%);
+  }
+  25% {
+    transform: translateY(-25%);
+  }
+  37.5% {
+    transform: translateY(-37.5%);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  62.5% {
+    transform: translateY(-62.5%);
+  }
+  75% {
+    transform: translateY(-75%);
+  }
+  87.5% {
+    transform: translateY(-87.5%);
+  }
+}
+
+/* ============================================================================
+   GRADIENT LINE STYLES
+   ============================================================================
+   Used for visual separators and accent elements
+*/
+
+.gradient-line {
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    rgba(69, 222, 196, 0) 0%,
+    #777777  25%,
+    #dcd800 37.51%,
+    #ff8113 62.83%,
+    #f03d3d 92.91%
+  );
+}
+
+.gradient-edge:nth-of-type(1) {
+  left: 0;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* Right gradient edge for fade effects */
+.gradient-edge:nth-of-type(2) {
+  right: 0;
+  background: linear-gradient(
+    -90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* ============================================================================
+   MARQUEE ANIMATION STYLES
+   ============================================================================
+   Creates horizontal scrolling effects for logos and content
+*/
+
+/* Marquee container */
+.marquee {
+  width: 100dvw;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Marquee content box that moves */
+.marquee-box {
+  display: flex;
+  align-items: center;
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-item {
+  float: left;
+}
+
+/* Marquee animation keyframes */
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+/* ============================================================================
+   CARD HOVER EFFECTS
+   ============================================================================
+   Glowing border effects for interactive cards
+*/
+
+.card {
+  --start: 0;
+  position: relative;
+  z-index: 40;
+  overflow: hidden;
+  transition: border-color 1s ease-in-out;
+}
+
+.card::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  border: 2px solid transparent;
+  background: var(--gradient);
+  background-attachment: fixed;
+  mask: linear-gradient(#0000, #0000),
+    conic-gradient(
+      from calc((var(--start) - 15) * 1deg),
+      #ffffff1f 0deg,
+      white,
+      #ffffff00 100deg
+    );
+  mask-composite: intersect;
+  mask-clip: padding-box, border-box;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.glow {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(10px);
+  filter: saturate(200);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* View All Projects button */
+/* Replace the existing .back-btn styles with this cleaned up version */
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #1a1a1a;
+  color: #afa9d3;
+  padding: 16px 32px;
+  border-radius: 40px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: 1px solid #afa9d3;
+}
+
+.back-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #afa9d3;
+  transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+  z-index: -1;
+}
+
+.back-btn:hover {
+  color: #1a1a1a;
+}
+
+.back-btn:hover::before {
+  width: 100%;
+}
+
+.back-btn svg {
+  transform: none;
+  transition: transform 0.3s ease;
+}
+
+.back-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* projectpage */
+
+/* Add this CSS to your component or global styles to prevent bumping */
+
+.all-projects-section {
+  /* Prevent any layout shifts */
+  contain: layout style;
+}
+
+.projects-grid {
+  /* Stable grid container */
+  position: relative;
+  width: 100%;
+}
+
+.projects-grid > div:last-child {
+  /* Grid container stability */
+  position: relative;
+  min-height: 200px; /* Prevents complete collapse */
+}
+
+.project-card {
+  /* Prevent card jumping during re-renders */
+  contain: layout style;
+  transform: translateZ(0);
+  will-change: auto; /* Remove will-change to prevent layer creation issues */
+}
+
+/* Prevent scrollbar jumping */
+html {
+  overflow-y: scroll; /* Always show scrollbar */
+}
+
+/* Optional: Smooth transitions for new content */
+.project-card {
+  animation: fadeInUp 0.3s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 600px) {
+  .cta-button {
+    padding: 0.5rem 1rem !important;
+  }
+  .cta-button .text {
+    font-size: 1rem !important;
+  }
+  .cta-button .arrow-wrapper {
+    right: 0.5rem !important;
+    width: 2rem !important;
+    height: 2rem !important;
+  }
+  .cta-button .arrow-wrapper img {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
+}
+
+
+/* ============================================================================
+   ProjectDetailsCard
+   ============================================================================ */
+
+/* Enhanced card border with better visibility */
+.enhanced-card-border {
+  @apply border-2 border-gray-700 bg-gray-900;
+  background: #1a1a1a;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced card with improved glow effect */
+.enhanced-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.enhanced-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(175, 169, 211, 0.1),
+    transparent,
+    rgba(175, 169, 211, 0.1),
+    transparent
+  );
+  background-size: 400% 400%;
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  animation: gradientRotate 3s linear infinite;
+  transition: opacity 0.3s ease;
+}
+
+.enhanced-card:hover::before {
+  opacity: 1;
+}
+
+.enhanced-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+/* Gradient animation for the glow effect */
+@keyframes gradientRotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Enhanced card hover state */
+.enhanced-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(175, 169, 211, 0.2);
+  color:#afa9d3;
+}
+
+/* Better contrast for tech stack badges */
+.enhanced-card-border.hover\:bg-black-200:hover {
+  background: linear-gradient(135deg, #3a3a3a 0%, #4d4d4d 100%);
+  border-color: #afa9d3;
+  color: #ffffff;
+}
+
+/* Improved text formatting styles */
+.enhanced-card strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.enhanced-card em {
+  color: #afa9d3;
+  font-style: italic;
+}

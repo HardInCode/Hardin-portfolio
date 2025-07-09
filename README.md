@@ -2,7 +2,6 @@
 
 <div align="center">
   
-  [![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-blue?style=for-the-badge)](https://www.hrdn.xyz/)
   
   <p align="center">
     An immersive 3D portfolio website built with modern web technologies

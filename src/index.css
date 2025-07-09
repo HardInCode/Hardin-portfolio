@@ -60,11 +60,11 @@ section {
   --font-sans: "Mona Sans", sans-serif;
   
   /* Custom color palette for the portfolio */
-  --color-white-50: #afa9d3; /* Muted white/gray for secondary text */
+  --color-white-50: #e1d8ff; /* Muted white/gray for secondary text */
   --color-black-50: #1c1c21; /* Dark gray for cards and borders */
   --color-black-100: #0e0e10; /* Very dark gray for backgrounds */
   --color-black-200: #282732; /* Medium dark gray for components */
-  --color-blue-50: #839cb5; /* Muted blue for form elements */
+  --color-blue-50: #e0e0ff; /* Muted blue for form elements */
   --color-blue-100: #2d2d38; /* Dark blue for form backgrounds */
 }
 
@@ -317,7 +317,7 @@ section {
   }
     
   .cta-button:hover {
-    outline: 2px solid #afa9d3;
+    outline: 2px solid #e1d8ff;
     outline-offset: 2px;
   }
 
@@ -660,7 +660,7 @@ section {
   align-items: center;
   gap: 12px;
   background-color: #1a1a1a;
-  color: #afa9d3;
+  color: #e1d8ff;
   padding: 16px 32px;
   border-radius: 40px;
   font-weight: 600;
@@ -668,7 +668,7 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  border: 1px solid #afa9d3;
+  border: 1px solid #e1d8ff;
 }
 
 .back-btn::before {
@@ -678,7 +678,7 @@ section {
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: #afa9d3;
+  background-color: #e1d8ff;
   transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1);
   z-index: -1;
 }
@@ -843,13 +843,13 @@ html {
 .enhanced-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(175, 169, 211, 0.2);
-  color:#afa9d3;
+  color:#e1d8ff;
 }
 
 /* Better contrast for tech stack badges */
 .enhanced-card-border.hover\:bg-black-200:hover {
   background: linear-gradient(135deg, #3a3a3a 0%, #4d4d4d 100%);
-  border-color: #afa9d3;
+  border-color: #e1d8ff;
   color: #ffffff;
 }
 
@@ -860,6 +860,6 @@ html {
 }
 
 .enhanced-card em {
-  color: #afa9d3;
+  color: #e1d8ff;
   font-style: italic;
 }

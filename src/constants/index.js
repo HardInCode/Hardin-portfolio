@@ -219,14 +219,14 @@ const expCards = [
     ],
   },
   {
-    review: "Excelled as a Customer Data Entry, demonstrating strong organizational skills and attention to detail in managing large datasets and supporting customer operations.",
+    review: "Excelled as a Customer Data Coordinator, demonstrating strong organizational skills and attention to detail in managing large datasets and supporting customer operations.",
     imgPath: "/images/telkom.png",
     logoPath: "/images/logos/telkom.png",
-    title: "Customer Data Entry, PT Telkom Indonesia Gresik",
+    title: "Customer Data Coordinator, PT Telkom Indonesia Gresik",
     date: "October 2022 - November 2022",
     responsibilities: [
       "Accurately processed and recorded new customerservice orders for IndiHome products (WiFi, TV) into the companydatabase.",
-      "Managedthe status of over 200 customer records monthly, ensuring a seamless progression from initial request to the technicalinstallation phase.",
+      "Managed the status of over 200 customer records monthly, ensuring a seamless progression from initial request to the technicalinstallation phase.",
       "Maintained high levels of data integrity to prevent discrepancies and support efficient hand-offs to field technician teams."
     ],
   },

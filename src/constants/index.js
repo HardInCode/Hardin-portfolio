@@ -56,7 +56,7 @@ const words = [
 const counterItems = [
   { value: 3, suffix: "+", label: "Years of Study" },
   { value: 15, suffix: "+", label: "Projects" },
-  { value: 3.7, suffix: "+", label: "GPA" },
+  { value: 3.77, suffix: "/4.00", label: "GPA" },
   { value: 95, suffix: "%", label: "Academic Performance" },
 ];
 

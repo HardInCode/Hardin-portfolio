@@ -54,7 +54,7 @@ const words = [
 // Counter items displayed in the statistics section - appears in AnimatedCounter.jsx
 // Shows your key achievements with animated counting effect
 const counterItems = [
-  { value: 3, suffix: "+", label: "Years of Study" },
+  { value: 2, suffix: "+", label: "Years of Study" },
   { value: 15, suffix: "+", label: "Projects" },
   { value: 3.77, suffix: "/4.00", label: "GPA" },
   { value: 95, suffix: "%", label: "Academic Performance" },

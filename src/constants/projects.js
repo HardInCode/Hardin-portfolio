@@ -275,7 +275,7 @@ This project served as a comprehensive introduction to 3D web development, cover
 },
 {
     "id": "3D CGA",
-    "title": "3D Computer Graphics and Animation Project (Maya Civilization)",
+    "title": "3D Computer Graphics and Animation Project (Ancient Mayan civilization)",
     "description": "A fourth semester project in 3D Computer Graphics and Animation, building a comprehensive 3D environment and animating it using industry-standard tools.",
     "image": "/images/Projects/3DCGA/Maya128pixelNEw.png",
     "imageGallery": [

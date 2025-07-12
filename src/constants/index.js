@@ -253,10 +253,10 @@ const expLogos = [
 // Project categories used in the projects section
 const projectCategories = [
   "All",
+  "Cybersecurity",      
   "Web Development", 
   "Mobile Development",  
-  "3D & Graphics",    
-  "Cybersecurity"      
+  "3D & Graphics"    
 ];
 
 import projects from "./projects";

@@ -177,10 +177,8 @@ const AllProjects = () => {
               return project.category === "Others" && 
                      (project.id === "CTF" || project.title.toLowerCase().includes("security")) || 
                      project.category === "Cybersecurity" ||  project.category === "Cybersecurity Education" || project.category === "Cybersecurity Competition" ;
-            // case "Others":
-            //   return project.category === "Others" && 
-            //          project.id !== "CTF" && 
-            //          !project.title.toLowerCase().includes("security");
+            case "AI and Automation":
+              return project.category === "AI and Automation" || project.category === "AI" || project.category === "Automation";  
             default:
               return project.category === category;
           }

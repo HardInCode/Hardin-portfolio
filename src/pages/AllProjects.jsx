@@ -9,18 +9,14 @@ import { projects, projectCategories } from "../constants";
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 // Utility function to shuffle an array
 const shuffleArray = (array) => {
-  let currentIndex = array.length,  randomIndex;
+  let currentIndex = array.length, randomIndex;
 
-  // While there remain elements to shuffle.
   while (currentIndex !== 0) {
-
-    // Pick a remaining element.
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
-
-    // And swap it with the current element.
     [array[currentIndex], array[randomIndex]] = [
       array[randomIndex], array[currentIndex]];
   }
@@ -32,7 +28,7 @@ const AllProjects = () => {
   const sectionRef = useRef(null);
   const gridRef = useRef(null);
   const headerRef = useRef(null);
-  const containerRef = useRef(null); // New ref for the main container
+  const containerRef = useRef(null);
   const [activeFilter, setActiveFilter] = useState("All");
   const [filteredProjects, setFilteredProjects] = useState([]);
   const isAnimating = useRef(false);
@@ -154,25 +150,75 @@ const AllProjects = () => {
 
   // Initialize filtered projects on mount
   useEffect(() => {
-    // Shuffle the projects array before setting the state
     const shuffledProjects = shuffleArray([...projects]);
     setFilteredProjects(shuffledProjects);
   }, []);
 
-  // FIXED: Ultra-simple filter with no jumping
+  // Handle main category filter change
   const handleFilterChange = (category) => {
-    // Don't do anything if same category
     if (category === activeFilter) return;
 
-    // Update immediately without animation
     setActiveFilter(category);
 
-    // Update filtered projects
+    // Update filtered projects based on new category mapping
     const newFilteredProjects = category === "All"
-      ? shuffleArray([...projects]) // Also shuffle when "All" is clicked again
-      : projects.filter(project => project.category === category);
+      ? shuffleArray([...projects])
+      : projects.filter(project => {
+          switch (category) {
+            case "Web Development":
+              return project.category === "Web Applications" || 
+                     project.category === "Three.js Implementation";                
+            case "Mobile Development":
+              return project.category === "Mobile App" ||
+                     project.category === "Mobile Development";
+            case "3D & Graphics":
+              return project.category === "3D CGA";
+            case "Cybersecurity":
+              return project.category === "Others" && 
+                     (project.id === "CTF" || project.title.toLowerCase().includes("security")) || 
+                     project.category === "Cybersecurity" ||  project.category === "Cybersecurity Education" || project.category === "Cybersecurity Competition" ;
+            // case "Others":
+            //   return project.category === "Others" && 
+            //          project.id !== "CTF" && 
+            //          !project.title.toLowerCase().includes("security");
+            default:
+              return project.category === category;
+          }
+        });
 
     setFilteredProjects(newFilteredProjects);
+  };
+
+  // Handle subcategory filter change
+  const handleSubcategoryChange = (subcategory) => {
+    if (subcategory === activeSubcategory) {
+      // If clicking the same subcategory, show all tools
+      setActiveSubcategory(null);
+      const newFilteredProjects = projects.filter(project => 
+        project.category === "Educational Tools" || 
+        project.category === "Security Tools" || 
+        project.category === "Development Tools"
+      );
+      setFilteredProjects(newFilteredProjects);
+    } else {
+      // Filter by specific subcategory
+      setActiveSubcategory(subcategory);
+      const newFilteredProjects = projects.filter(project => project.category === subcategory);
+      setFilteredProjects(newFilteredProjects);
+    }
+  };
+
+  // Toggle subcategory visibility
+  const toggleSubcategories = (categoryName) => {
+    setShowSubcategories(prev => ({
+      ...prev,
+      [categoryName]: !prev[categoryName]
+    }));
+  };
+
+  // Get display name for header
+  const getDisplayName = () => {
+    return activeFilter === "All" ? "All Projects" : `${activeFilter} Projects`;
   };
 
   return (
@@ -193,34 +239,31 @@ const AllProjects = () => {
           </div>
 
           {/* Category Filter */}
-          <div className="filter-container flex flex-wrap justify-center gap-4 mb-16">
-            {projectCategories.map((category, index) => (
-              <button
-                key={index}
-                onClick={() => handleFilterChange(category)}
-                disabled={false}
-                className={`filter-btn inline-flex items-center gap-2 md:gap-3 font-semibold transition-all duration-200 px-4 py-2 md:px-6 md:py-3 text-sm md:text-base rounded-full ${
-                  activeFilter === category
-                    ? 'bg-[#1a1a1a] text-white border border-[#1a1a1a]'
-                    : 'bg-transparent text-white-50 border border-[#333] hover:bg-[#1a1a1a] hover:text-white hover:border-[#1a1a1a]'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
+          <div className="filter-container mb-16">
+            <div className="flex flex-wrap justify-center gap-4">
+              {projectCategories.map((category, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleFilterChange(category)}
+                  className={`filter-btn inline-flex items-center gap-2 md:gap-3 font-semibold transition-all duration-200 px-4 py-2 md:px-6 md:py-3 text-sm md:text-base rounded-full ${
+                    activeFilter === category
+                      ? 'bg-[#1a1a1a] text-white border border-[#1a1a1a]'
+                      : 'bg-transparent text-white-50 border border-[#333] hover:bg-[#1a1a1a] hover:text-white hover:border-[#1a1a1a]'
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Projects Grid */}
           <div className="projects-grid">
             {/* Projects Header */}
-            <div
-              ref={headerRef}
-              className="text-center mb-12"
-            >
+            <div ref={headerRef} className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-2">
-                {activeFilter === "All" ? "All Projects" : `${activeFilter} Projects`}
+                {getDisplayName()}
               </h2>
-              {/* <div className="w-16 h-1 bg-gradient-to-r from-purple-500 to-blue-800 mx-auto rounded-full"></div> */}
               <p className="text-white-50 mt-2">
                 Showing {filteredProjects.length} project{filteredProjects.length !== 1 ? 's' : ''}
               </p>

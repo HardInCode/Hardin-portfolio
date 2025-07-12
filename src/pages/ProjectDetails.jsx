@@ -1,4 +1,4 @@
-import { useState, useEffect   } from "react";
+import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import projects from "../constants/projects";
 
@@ -30,6 +30,54 @@ const ProjectDetails = () => {
     parsed = parsed.replace(/\*(.*?)\*/g, '<em>$1</em>');
     parsed = parsed.replace(/\n/g, '<br>');
     return parsed;
+  };
+
+  // Helper function to determine if a file is a video
+  const isVideoFile = (src) => {
+    const videoExtensions = ['.mp4', '.webm', '.ogg', '.mov', '.avi'];
+    return videoExtensions.some(ext => src.toLowerCase().includes(ext));
+  };
+
+  // Helper function to render media (image or video)
+  const renderMedia = (mediaData, onClick) => {
+    const isVideo = mediaData.type === 'video' || isVideoFile(mediaData.src);
+    
+    if (isVideo) {
+      return (
+        <div className="overflow-hidden rounded-lg bg-gray-900 relative group">
+          <video 
+            className="w-full max-h-[350px] object-contain rounded-lg group-hover:scale-105 transition-transform duration-500 shadow-lg" 
+            controls 
+            preload="metadata"
+            poster={mediaData.poster} // Optional: add poster image
+          >
+            <source src={mediaData.src} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          {/* Optional: Add play button overlay */}
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            <div className="bg-black bg-opacity-50 rounded-full p-4">
+              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div 
+          onClick={() => onClick(mediaData.src)}
+          className="overflow-hidden rounded-lg bg-gray-900 cursor-pointer"
+        >
+          <img 
+            src={mediaData.src} 
+            alt={mediaData.title} 
+            className="w-full max-h-[350px] object-contain rounded-lg group-hover:scale-105 transition-transform duration-500 shadow-lg" 
+          />
+        </div>
+      );
+    }
   };
 
   if (!project) {
@@ -89,47 +137,92 @@ const ProjectDetails = () => {
             </div>
           </div>
 
+          {/* Video Section */}
+          {project.video && (
+            <div className="mb-12">
+              <h2 className="text-2xl font-semibold mb-6 text-white">Project Video</h2>
+              <div className="enhanced-card-border rounded-xl p-6 hover:border-white-50 transition-all duration-300 enhanced-card">
+                <div className="aspect-video bg-gray-900 rounded-lg overflow-hidden">
+                  <video 
+                    className="w-full h-full object-contain"
+                    controls
+                    poster={mainImageSrc}
+                    preload="metadata"
+                  >
+                    <source src={project.video} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div className="border-t border-black-50 pt-4 mt-4">
+                  <h3 className="text-lg font-medium text-white mb-2">
+                    {project.videoTitle || "Project Demonstration"}
+                  </h3>
+                  <p className="text-white-50 text-sm leading-relaxed">
+                    {project.videoDescription || "Watch the complete demonstration of this project showcasing its features and functionality."}
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Images Gallery */}
           <div className="mb-12">
             <h2 className="text-2xl font-semibold mb-6 text-white">Project Gallery</h2>
             
-            {/* Main Featured Image */}
-            <div className="enhanced-card-border rounded-xl p-6 mb-8 hover:border-white-50 transition-all duration-300 group enhanced-card">
-              <div 
-                onClick={() => openModal(mainImageSrc)} 
-                className="overflow-hidden rounded-lg cursor-pointer"
-              >
-                <img 
-                  src={mainImageSrc}
-                  alt={`${project.title} - Main View`} 
-                  className="w-full max-h-[500px] object-contain bg-gray-900 rounded-lg shadow-2xl mb-4 group-hover:scale-105 transition-transform duration-500"
-                />
+            {/* Main Featured Media */}
+            {project.imageGallery && project.imageGallery.length > 0 && (
+              <div className="enhanced-card-border rounded-xl p-6 mb-8 hover:border-white-50 transition-all duration-300 group enhanced-card">
+                {renderMedia(project.imageGallery[0], openModal)}
+                <div className="border-t border-black-50 pt-4">
+                  <h3 className="text-lg font-medium text-white mb-2">
+                    {project.imageGallery[0].title}
+                  </h3>
+                  <p className="text-white-50 text-sm leading-relaxed">
+                    {project.imageGallery[0].description}
+                  </p>
+                </div>
               </div>
-              <div className="border-t border-black-50 pt-4">
-                <h3 className="text-lg font-medium text-white mb-2">{project.imageGallery ? project.imageGallery[0].title : "Main Project View"}</h3>
-                <p className="text-white-50 text-sm leading-relaxed">{project.imageGallery ? project.imageGallery[0].description : "Primary overview of the project interface and functionality."}</p>
-              </div>
-            </div>
+            )}
 
-            {/* Additional Images with Explanations */}
+            {/* Fallback for non-imageGallery format */}
+            {!project.imageGallery && (
+              <div className="enhanced-card-border rounded-xl p-6 mb-8 hover:border-white-50 transition-all duration-300 group enhanced-card">
+                <div 
+                  onClick={() => openModal(mainImageSrc)} 
+                  className="overflow-hidden rounded-lg cursor-pointer"
+                >
+                  <img 
+                    src={mainImageSrc}
+                    alt={`${project.title} - Main View`} 
+                    className="w-full max-h-[500px] object-contain bg-gray-900 rounded-lg shadow-2xl mb-4 group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="border-t border-black-50 pt-4">
+                  <h3 className="text-lg font-medium text-white mb-2">Main Project View</h3>
+                  <p className="text-white-50 text-sm leading-relaxed">Primary overview of the project interface and functionality.</p>
+                </div>
+              </div>
+            )}
+
+            {/* Additional Media with Explanations */}
             {((project.imageGallery && project.imageGallery.length > 1) || 
               (project.images && project.images.length > 1) || 
               (project.screenshots && project.screenshots.length > 0)) && (
               <div>
                 <h3 className="text-xl font-medium mb-6 text-white-50">Detailed Views</h3>
                 <div className="space-y-8">
-                  {/* Show additional images from imageGallery array */}
-                  {project.imageGallery && project.imageGallery.slice(1).map((imageData, idx) => (
+                  {/* Show additional media from imageGallery array */}
+                  {project.imageGallery && project.imageGallery.slice(1).map((mediaData, idx) => (
                     <div key={`gallery-${idx}`} className="enhanced-card-border rounded-xl p-6 hover:border-white-50 transition-all duration-300 group enhanced-card">
                       <div className="grid lg:grid-cols-2 gap-8 items-start">
                         <div className="order-2 lg:order-1">
-                          <h4 className="text-lg font-medium text-white mb-3">{imageData.title}</h4>
-                          <div className="text-white-50 leading-relaxed text-sm mb-4" dangerouslySetInnerHTML={{ __html: parseText(imageData.description) }} />
-                          {imageData.features && imageData.features.length > 0 && (
+                          <h4 className="text-lg font-medium text-white mb-3">{mediaData.title}</h4>
+                          <div className="text-white-50 leading-relaxed text-sm mb-4" dangerouslySetInnerHTML={{ __html: parseText(mediaData.description) }} />
+                          {mediaData.features && mediaData.features.length > 0 && (
                             <div>
                               <h5 className="text-sm font-medium text-white mb-2">Key Features:</h5>
                               <ul className="text-white-50 text-sm space-y-1">
-                                {imageData.features.map((feature, featureIdx) => (
+                                {mediaData.features.map((feature, featureIdx) => (
                                   <li key={featureIdx} className="flex items-start gap-2">
                                     <span className="text-white">•</span>
                                     <span dangerouslySetInnerHTML={{ __html: parseText(feature) }} />
@@ -140,12 +233,7 @@ const ProjectDetails = () => {
                           )}
                         </div>
                         <div className="order-1 lg:order-2">
-                          <div 
-                            onClick={() => openModal(imageData.src)}
-                            className="overflow-hidden rounded-lg bg-gray-900 cursor-pointer"
-                          >
-                            <img src={imageData.src} alt={imageData.title} className="w-full max-h-[350px] object-contain rounded-lg group-hover:scale-105 transition-transform duration-500 shadow-lg" />
-                          </div>
+                          {renderMedia(mediaData, openModal)}
                         </div>
                       </div>
                     </div>
@@ -252,6 +340,15 @@ const ProjectDetails = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
                 See Report
+              </a>
+            )}
+
+            {project.video && (
+              <a href={project.video} target="_blank" rel="noopener noreferrer" className="flex-1 bg-black-200 hover:bg-white text-white hover:text-[#afa9d3] px-6 py-4 rounded-lg font-medium text-center transition-all duration-300 flex items-center justify-center gap-2 enhanced-card-border hover:border-white group">
+                <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                Download Video
               </a>
             )}
           </div>

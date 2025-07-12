@@ -3,6 +3,8 @@
 // Each image can have a title, description, and optional features list
 
 const projects = [
+
+// Mobile POS
   {
     id: "POS",
     title: "Inventory Management & POS System",
@@ -50,7 +52,7 @@ const projects = [
         ]
       },
     ],
-    category: "Mobile App",
+    category: "Mobile Development",
     technologies: ["React Native", "Expo", "TailwindCSS", "JavaScript"],
     github: null,
     demo: null,
@@ -71,6 +73,7 @@ The interface prioritizes speed and ease of use, with large touch-friendly butto
   },
 
 
+// PW analyzer
   {
     id: "password-analyzer",
     title: "Password Security Analyzer",
@@ -126,7 +129,7 @@ The interface prioritizes speed and ease of use, with large touch-friendly butto
     ]
   }
 ],
-    category: "Educational Tools",
+    category: "Cybersecurity Education",
     technologies: ["JavaScript", "HTML5", "Tailwind CSS"],
     github: "https://github.com/HardInCode/secure-password-toolkit.git",
     demo: "https://hardincode.github.io/secure-password-toolkit/",
@@ -150,7 +153,7 @@ All analysis is performed client-side with no data transmission, ensuring comple
   },
 
 
-  
+// Web Scrapping
   {
     id: "pdf-web-scraping",
     title: "PDF Journal Web Scraping Tool",
@@ -178,13 +181,13 @@ All analysis is performed client-side with no data transmission, ensuring comple
         ]
       },        // Advanced filtering options
     ],
-    category: "Educational Tools",
+    category: "Cybersecurity Education",
     technologies: ["Javascript", "TypeScript", "HTML5", "Tailwind CSS"],
     github: "https://github.com/HardInCode/arxiv-paper-finder.git",
     demo: "https://hardincode.github.io/arxiv-paper-finder/",
     screenshots: [],
     report: null,
-    details: `An intelligent research paper discovery tool that streamlines the process of finding relevant academic papers from arXiv.
+    details: `An research paper discovery tool that streamlines the process of finding relevant academic papers from arXiv.
 
 **Search Capabilities:**
 - Advanced keyword
@@ -205,7 +208,7 @@ All analysis is performed client-side with no data transmission, ensuring comple
   },
 
 
-  
+// Mayan Floating 
   {
     id: "mayan-floating-island",
     title: "Mayan Floating Island",
@@ -218,7 +221,7 @@ All analysis is performed client-side with no data transmission, ensuring comple
       // "/images/3d-modeling-process.jpg",   // Behind-the-scenes Blender work
       // "/images/lighting-effects.jpg"      // Dynamic lighting showcase
     ],
-    category: "Web Applications",
+    category: "Three.js Implementation",
     technologies: ["Javascript", "Vite + React", "Three.js", "Blender", "HTML5", "Tailwind CSS"],
     github: "https://github.com/HardInCode/TryingThreeJS.git",
     demo: "https://trying-three-js.vercel.app/",
@@ -242,7 +245,7 @@ All analysis is performed client-side with no data transmission, ensuring comple
 This project served as a comprehensive introduction to 3D web development, covering model optimization, lighting techniques, and performance considerations for browser-based 3D applications.`,
   },
 
-
+// CTF
   {
     "id": "CTF",
     "title": "Capture The Flag Competition",
@@ -258,7 +261,7 @@ This project served as a comprehensive introduction to 3D web development, cover
             ]
         },
     ],
-    "category": "Others",
+    "category": "Cybersecurity Competition",
     "technologies": [
         "Web",
         "OSINT",
@@ -270,6 +273,50 @@ This project served as a comprehensive introduction to 3D web development, cover
     "screenshots": [],
     "details": "details\n\n**CTF Categories**\n\n* **Web:** gottagofast, Homie, broken-eh, Library, Ding-dong, Travelcon, Qr-generator, Pdfgenerator, Recruitprogrammer, Pet-donation, Nopasswd, Reader-Reader\n* **OSINT:** namejumpheadbang, Find My Friend, My Favourite\n* **Cryptography:** supposedly-easy, XORry, Vinegar, Rizz Me Up, Triple Threat\n* **Miscellaneous:** My Fav Intro, New-Schedule, LastMessage\n* **Forensic:** Color-theory, Scout Code, Binbasecii, Nightmare, Mailer, Latte, Chameleon, lost-da-important-fil3, TripleThreat2, Gotta-fix-the-corruption\n\n**Learning Objectives:**\nThis CTF challenge was designed to increase and test a wide range of cyberskills, providing practical experience in:\n\n* **Vulnerability Analysis:** Identifying and understanding security flaws such as SQL Injection, Command Injection, JWT 'alg=none' vulnerability, Integer Overflow, and insecure file/directory permissions.\n* **Exploitation:** Actively exploiting vulnerabilities using manual techniques and specialized tools to gain unauthorized access, bypass security controls, and retrieve sensitive data like flags.\n* **Digital Forensics:** Conducting forensic analysis on various file types, including network packet captures (PCAP), disk images (AD1), and multimedia files. This includes data carving, metadata analysis (EXIF), steganography, and log analysis.\n* **Cryptography:** Solving cryptographic puzzles by recognizing and reversing various ciphers (Caesar, Atbash, Vigenère, ROT47) and understanding the weaknesses in cryptographic implementations like flawed RSA key generation.\n* **Tool Proficiency:** Gaining hands-on experience with essential cybersecurity tools such as Burp Suite, curl, Python (for scripting exploits), HxD, FTK Imager, Steghide, Wireshark, NetworkMiner, and various online decoders.\n* **OSINT Techniques:** Applying Open-Source Intelligence methods to gather information from public sources like social media profiles and websites to solve investigation-based challenges."
 },
+{
+    "id": "3D CGA",
+    "title": "3D Computer Graphics and Animation Project (Maya Civilization)",
+    "description": "A fourth semester project in 3D Computer Graphics and Animation, building a comprehensive 3D environment and animating it using industry-standard tools.",
+    "image": "/images/Projects/3DCGA/Maya128pixelNEw.png",
+    "imageGallery": [
+        {
+            "src": "/images/Projects/3DCGA/Maya128pixelNEw.png",
+            "title": "3D Environment Overview",
+            "description": "The main 3D scene showcasing the complete environment with detailed modeling, texturing, and lighting setup. This project demonstrates advanced 3D modeling techniques and scene composition.",
+            "features": [
+                "Complex 3D environment modeling",
+                "Advanced lighting and shading techniques",
+                "Detailed texture work and material creation",
+                "Professional scene composition"
+            ]
+        },
+        {
+            "src": "/images/Projects/3DCGA/XaltheonRunningAnim0001-0060.mp4",
+            "type": "video",
+            "title": "Animated Character Frame",
+            "description": "Animated Character idle, walk, and run",
+            "features": [
+                "Smooth camera animations",
+                "Object transformations and keyframing",
+                "Dynamic lighting changes",
+                "Professional rendering quality"
+            ]
+        }
+    ],
+    "category": "3D CGA",
+    "technologies": [
+        "Blender",
+        "3D Modeling",
+        "3D Animation",
+        "Rendering",
+        "Lighting Design",
+        "Texture Mapping"
+    ],
+    "report": "https://docs.google.com/document/d/1cFPc_njY2SGSlIt0Oa6zD9tiWajKFcVI/edit?usp=sharing&ouid=103671008663272847110&rtpof=true&sd=true",
+    "video": "/images/Projects/3DCGA/MayanCivilizationFreeAnimation.mp4", 
+    "screenshots": [],
+    "details": "This project was developed as part of my fourth semester coursework in 3D Computer Graphics and Animation. The project involved creating a complete 3D environment from scratch, including detailed modeling, texturing, lighting, and animation.\n\nThe project demonstrates proficiency in professional 3D software and covers essential aspects of 3D production pipeline including:\n\n**Modeling Phase**: Created detailed 3D models using industry-standard techniques, focusing on topology optimization and geometric accuracy.\n\n**Texturing and Materials**: Developed realistic materials using advanced shading techniques, including procedural textures and UV mapping.\n\n**Lighting Design**: Implemented professional lighting setups to enhance the visual appeal and create mood within the 3D environment.\n\n**Animation**: Created smooth animations with proper timing and easing, demonstrating understanding of animation principles and keyframe interpolation.\n\n**Rendering**: Produced high-quality final renders with optimized settings for both still images and animated sequences."
+}
 ];
 
 export default projects;

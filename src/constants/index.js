@@ -251,7 +251,13 @@ const expLogos = [
 ];
 
 // Project categories used in the projects section
-const projectCategories = ["All", "Security Tools", "Web Applications", "Mobile App", "Automation Tools", "Educational Tools", "Others"];
+const projectCategories = [
+  "All",
+  "Web Development", 
+  "Mobile Development",  
+  "3D & Graphics",    
+  "Cybersecurity"      
+];
 
 import projects from "./projects";
 

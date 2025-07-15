@@ -343,12 +343,18 @@ const ProjectDetails = () => {
               </a>
             )}
 
-            {project.video && (
-              <a href={project.video} target="_blank" rel="noopener noreferrer" className="flex-1 bg-black-200 hover:bg-white text-white hover:text-[#afa9d3] px-6 py-4 rounded-lg font-medium text-center transition-all duration-300 flex items-center justify-center gap-2 enhanced-card-border hover:border-white group">
+            {/* MODIFIED: This button now links to an external source, like a Google Drive folder or file. */}
+            {project.videoLink && (
+              <a 
+                href={project.videoLink} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex-1 bg-black-200 hover:bg-white text-white hover:text-[#afa9d3] px-6 py-4 rounded-lg font-medium text-center transition-all duration-300 flex items-center justify-center gap-2 enhanced-card-border hover:border-white group"
+              >
                 <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
-                Download Video
+                View Project Files
               </a>
             )}
           </div>

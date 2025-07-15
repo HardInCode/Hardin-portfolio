@@ -274,48 +274,123 @@ This project served as a comprehensive introduction to 3D web development, cover
     "details": "details\n\n**CTF Categories**\n\n* **Web:** gottagofast, Homie, broken-eh, Library, Ding-dong, Travelcon, Qr-generator, Pdfgenerator, Recruitprogrammer, Pet-donation, Nopasswd, Reader-Reader\n* **OSINT:** namejumpheadbang, Find My Friend, My Favourite\n* **Cryptography:** supposedly-easy, XORry, Vinegar, Rizz Me Up, Triple Threat\n* **Miscellaneous:** My Fav Intro, New-Schedule, LastMessage\n* **Forensic:** Color-theory, Scout Code, Binbasecii, Nightmare, Mailer, Latte, Chameleon, lost-da-important-fil3, TripleThreat2, Gotta-fix-the-corruption\n\n**Learning Objectives:**\nThis CTF challenge was designed to increase and test a wide range of cyberskills, providing practical experience in:\n\n* **Vulnerability Analysis:** Identifying and understanding security flaws such as SQL Injection, Command Injection, JWT 'alg=none' vulnerability, Integer Overflow, and insecure file/directory permissions.\n* **Exploitation:** Actively exploiting vulnerabilities using manual techniques and specialized tools to gain unauthorized access, bypass security controls, and retrieve sensitive data like flags.\n* **Digital Forensics:** Conducting forensic analysis on various file types, including network packet captures (PCAP), disk images (AD1), and multimedia files. This includes data carving, metadata analysis (EXIF), steganography, and log analysis.\n* **Cryptography:** Solving cryptographic puzzles by recognizing and reversing various ciphers (Caesar, Atbash, Vigenère, ROT47) and understanding the weaknesses in cryptographic implementations like flawed RSA key generation.\n* **Tool Proficiency:** Gaining hands-on experience with essential cybersecurity tools such as Burp Suite, curl, Python (for scripting exploits), HxD, FTK Imager, Steghide, Wireshark, NetworkMiner, and various online decoders.\n* **OSINT Techniques:** Applying Open-Source Intelligence methods to gather information from public sources like social media profiles and websites to solve investigation-based challenges."
 },
 {
-    "id": "3D CGA",
-    "title": "3D Computer Graphics and Animation Project (Ancient Mayan civilization)",
-    "description": "A fourth semester project in 3D Computer Graphics and Animation, building a comprehensive 3D environment and animating it using industry-standard tools.",
-    "image": "/images/Projects/3DCGA/Maya128pixelNEw.png",
-    "imageGallery": [
-        {
-            "src": "/images/Projects/3DCGA/Maya128pixelNEw.png",
-            "title": "3D Environment Overview",
-            "description": "The main 3D scene showcasing the complete environment with detailed modeling, texturing, and lighting setup. This project demonstrates advanced 3D modeling techniques and scene composition.",
-            "features": [
-                "Complex 3D environment modeling",
-                "Advanced lighting and shading techniques",
-                "Detailed texture work and material creation",
-                "Professional scene composition"
-            ]
-        },
-        {
-            "src": "/images/Projects/3DCGA/XaltheonRunningAnim0001-0060.mp4",
-            "type": "video",
-            "title": "Animated Character Frame",
-            "description": "Animated Character idle, walk, and run",
-            "features": [
-                "Smooth camera animations",
-                "Object transformations and keyframing",
-                "Dynamic lighting changes",
-                "Professional rendering quality"
-            ]
-        }
-    ],
-    "category": "3D CGA",
-    "technologies": [
-        "Blender",
-        "3D Modeling",
-        "3D Animation",
-        "Rendering",
-        "Lighting Design",
-        "Texture Mapping"
-    ],
-    "report": "https://docs.google.com/document/d/1cFPc_njY2SGSlIt0Oa6zD9tiWajKFcVI/edit?usp=sharing&ouid=103671008663272847110&rtpof=true&sd=true",
-    "video": "/images/Projects/3DCGA/MayanCivilizationFreeAnimation.mp4", 
-    "screenshots": [],
-    "details": "This project was developed as part of my fourth semester coursework in 3D Computer Graphics and Animation. The project involved creating a complete 3D environment from scratch, including detailed modeling, texturing, lighting, and animation.\n\nThe project demonstrates proficiency in professional 3D software and covers essential aspects of 3D production pipeline including:\n\n**Modeling Phase**: Created detailed 3D models using industry-standard techniques, focusing on topology optimization and geometric accuracy.\n\n**Texturing and Materials**: Developed realistic materials using advanced shading techniques, including procedural textures and UV mapping.\n\n**Lighting Design**: Implemented professional lighting setups to enhance the visual appeal and create mood within the 3D environment.\n\n**Animation**: Created smooth animations with proper timing and easing, demonstrating understanding of animation principles and keyframe interpolation.\n\n**Rendering**: Produced high-quality final renders with optimized settings for both still images and animated sequences."
+  "id": "3D CGA",
+  "title": "3D Computer Graphics and Animation Project (Ancient Mayan civilization)",
+  "description": "A fourth semester project in 3D Computer Graphics and Animation, building a comprehensive 3D environment and animating it using industry-standard tools.",
+  "image": "/images/Projects/3DCGA/Maya128pixelNEw.png",
+  "imageGallery": [
+    {
+      "src": "/images/Projects/3DCGA/Maya128pixelNEw.png",
+      "title": "Final Rendered Scene",
+      "description": "The final composition of the Mayan Civilization scene, showcasing the environment, characters, and atmospheric lighting. This image represents the culmination of all modeling, texturing, and lighting work.",
+      "features": [
+        "Dynamic lighting with a prominent full moon",
+        "Dense, low-poly jungle environment",
+        "Character interaction around a central campfire",
+        "A distant pyramid adding depth to the scene"
+      ]
+    },
+    {
+        "src": "/images/Projects/3DCGA/MyFirstAssets.png",
+        "title": "Environment and Prop Assets",
+        "description": "A showcase of the custom-made, low-poly assets created for the project. This collection includes various types of trees, plants, flowers, rocks, and logs used to build the final scene.",
+        "features": [
+          "Manually modeled trees, flowers, grasses, and rocks.",
+          "Randomized flower colors using Blender's 'Object Info' and 'Color Ramp' nodes.",
+          "All assets designed to fit a consistent low-poly aesthetic."
+        ]
+    },
+    {
+        "src": "/images/Projects/3DCGA/Characters128.png",
+        "title": "Character Models Showcase",
+        "description": "A lineup of the character models in their T-pose, displaying the base meshes and the custom-designed clothing and accessories before rigging and animation.",
+        "features": [
+          "Separate human body templates for male and female characters.",
+          "Accessories created by duplicating and sculpting faces from the base model.",
+          "Use of 'Solidify' and 'Mirror' modifiers for efficient modeling."
+        ]
+    },
+    {
+      "src": "/images/Projects/3DCGA/XaltheonRunningAnim0001-0060.mp4",
+      "type": "video",
+      "title": "Character Animation Reel",
+      "description": "A demonstration of the character animation, including idle, walk, and run cycles for the main character, Xaltheon. This reel highlights the rigging and keyframing work.",
+      "features": [
+        "Smooth character and camera animations",
+        "Object transformations and keyframing",
+        "Dynamic lighting that interacts with the moving character",
+        "Professional rendering quality for animated sequences"
+      ]
+    }
+  ],
+  "category": "3D CGA",
+  "technologies": [
+    "Blender",
+    "3D Modeling",
+    "3D Animation",
+    "Rendering",
+    "Lighting Design",
+    "Texture Mapping"
+  ],
+  "report": "https://docs.google.com/document/d/1cFPc_njY2SGSlIt0Oa6zD9tiWajKFcVI/edit?usp=sharing&ouid=103671008663272847110&rtpof=true&sd=true",
+  "video": "/images/Projects/3DCGA/MayanCivilizationFreeAnimation.mp4",
+  "videoLink": "https://drive.google.com/drive/folders/1NrUQbW_tU2ygDTtJveSTKlPjmvbp2Joq?usp=sharing",
+  "screenshots": [],
+  "details": "This project, titled \"Mayan Civilization,\" was developed for a fourth-semester course in 3D Computer Graphics and Animation at President University. The goal was to create a complete 3D environment from scratch, featuring custom models, detailed texturing, atmospheric lighting, and full animation sequences. The project was a collaborative effort by Ahmad Akbar Sidiq, Athaillah Dea Arkananta, Hardin Irfan, and Putra Ananta Darmawan.\n\n**Background Story**\nThe narrative follows Xaltheon, an Aztec-born warrior orphaned during the Spanish conquest. Haunted by his past, he escapes into the jungle where he forges an unbreakable bond with an ocelot named Tecu after saving him from a trap. Xaltheon eventually finds refuge in a Mayan kingdom, though his heart remains hardened by loss. His life changes when he befriends the young Mayan prince, Kaan. They train together, and as Kaan ascends to the throne, he makes Xaltheon his most trusted warrior, gifting him the sacred spear, Astraeus. Now, Xaltheon serves his king with unmatched, merciless strength, his true intentions a mystery to all.\n\n**Character Profiles**\n* **Xaltheon**: The main character, a mysterious and quiet Mayan warrior who hides his face behind a mask. He is the king's most loyal warrior, respected for his strength and focus.\n* **Tecu**: Xaltheon's ocelot companion. While he appears as a normal ocelot, he can transform into a fierce, powerful creature when Xaltheon is in danger.\n* **Kaan**: The wise and brave king of the Mayan kingdom. He is a skilled leader and fighter who shares a deep, unbreakable friendship with Xaltheon.\n* **Astraeus**: A divine spear forged by the gods that channels the energy of the stars, granting its wielder immense power and agility.\n\n**Technical Implementation**\nThe entire 3D scene was built using Blender, with a focus on a low-poly art style.\n\n* **Modeling & Landscaping:** All environmental assets, including trees, flowers, grass, rocks, and buildings (huts, pyramids, statues), were modeled from scratch. These assets were placed manually to create the landscape. The low-poly ground was created by subdividing a plane and using 'Solidify' and 'Bevel' modifiers, then randomly moving vertices along the Z-axis.\n* **Character Modeling:** The team first created male and female human body templates. Clothes and accessories were designed by selecting faces on the body, duplicating them, and sculpting them into the desired shape using 'Solidify' and 'Mirror' modifiers for thickness and symmetry.\n* **Materials & Special Effects:** The fire effect was achieved using a particle system configured to emit cube particles with an emission color. For texturing, standard BSDF colors were used, with gradients on some elements and metallic effects for jewelry. A 'Color Ramp' node connected to an 'Object Info' node was used to generate random colors for duplicated objects like flowers and leaves. The sky and clouds were generated using the 'Dynamic Sky' addon.\n\n**Learning Outcomes**\nThe team gained significant experience with Blender, becoming more familiar with shortcuts, material creation, rigging, and animation techniques like keyframing. The main challenge was coordination and maintaining focus during group work sessions."
+},
+
+
+// Unityanim
+{
+  "id": "UnityCutscene",
+  "title": "Dynamic 3D Animation Scene in Unity",
+  "description": "A comprehensive project focused on creating a dynamic 3D animation scene using Unity. This project showcases skills in vehicle and character animation, timeline-based sequencing, and scene management for creating complex, synchronized animations.",
+  "image": "/images/Projects/UnityCutscene/SceneOverview.png",
+  "imageGallery": [
+    {
+      "src": "/images/Projects/UnityCutscene/SceneOverview.png",
+      "title": "City Environment Overview",
+      "description": "An overview of the 3D city environment created for the animation, showcasing various assets and the general layout.",
+      "features": [
+        "Detailed 3D city environment",
+        "Multiple animated characters and vehicles",
+        "Dynamic camera setup"
+      ]
+    },
+    {
+      "src": "/images/Projects/UnityCutscene/VehicleAnimation.png",
+      "title": "Scripted Vehicle Animation",
+      "description": "Vehicles animated using scripts to control their movement and wheel rotation, which activate when the scene is played.",
+      "features": [
+        "Transform location scripting for movement",
+        "Wheel rotation synchronized with vehicle speed",
+        "Timeline-controlled vehicle animations for specific events"
+      ]
+    },
+    {
+      "src": "/images/Projects/UnityCutscene/CharacterTimeline.png",
+      "title": "Character and Camera Animation Timeline",
+      "description": "The Unity Timeline is used to sequence camera movements and character animations, ensuring they are synchronized.",
+      "features": [
+        "Timeline-based camera choreography",
+        "Character animations triggered at specific timeline points",
+        "NPCs grouped and animated for efficiency"
+      ]
+    }
+  ],
+  "category": "3D Animation",
+  "technologies": [
+    "Unity",
+    "C# Scripting",
+    "3D Animation",
+    "Timeline Editor",
+    "Scene Management"
+  ],
+  "report": null,
+  "video": "/images/Projects/UnityCutscene/RenderedAnimation480.mp4",
+  "videoLink": "https://drive.google.com/drive/folders/16L8qtdT-yTroywsc1xXackndqK0BkvY_?usp=sharing",
+  "screenshots": [],
+  "details": "This project demonstrates the creation of a complex animated scene within the Unity engine, focusing on bringing a 3D environment to life through scripted and timeline-based animations.\n\n**Vehicle Animation**: Vehicles are animated using C# scripts to control their position and rotation. The wheels' rotation speed is directly tied to the vehicle's movement speed for added realism. Specific vehicles, like a yellow car, an airplane, and a UFO, are controlled via the Timeline to activate at precise moments in the animation.\n\n**Camera and Character Sequencing**: The main camera's movement is directed using the Timeline to create specific animated scenes. Characters' animations are also orchestrated within the Timeline, making them perform actions as the camera focuses on them.\n\n**NPC Management**: Non-player characters (NPCs) are organized into groups to streamline the animation process. Each group is assigned animations, allowing for efficient management of crowd scenes and background characters.\n\n**Asset Credits**: The 3D city assets used in this project were kindly provided by a friend, the founder of Buzzy Wizzy Studio, a university club at President University."
 }
 ];
 

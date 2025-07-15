@@ -274,7 +274,7 @@ This project served as a comprehensive introduction to 3D web development, cover
     "details": "details\n\n**CTF Categories**\n\n* **Web:** gottagofast, Homie, broken-eh, Library, Ding-dong, Travelcon, Qr-generator, Pdfgenerator, Recruitprogrammer, Pet-donation, Nopasswd, Reader-Reader\n* **OSINT:** namejumpheadbang, Find My Friend, My Favourite\n* **Cryptography:** supposedly-easy, XORry, Vinegar, Rizz Me Up, Triple Threat\n* **Miscellaneous:** My Fav Intro, New-Schedule, LastMessage\n* **Forensic:** Color-theory, Scout Code, Binbasecii, Nightmare, Mailer, Latte, Chameleon, lost-da-important-fil3, TripleThreat2, Gotta-fix-the-corruption\n\n**Learning Objectives:**\nThis CTF challenge was designed to increase and test a wide range of cyberskills, providing practical experience in:\n\n* **Vulnerability Analysis:** Identifying and understanding security flaws such as SQL Injection, Command Injection, JWT 'alg=none' vulnerability, Integer Overflow, and insecure file/directory permissions.\n* **Exploitation:** Actively exploiting vulnerabilities using manual techniques and specialized tools to gain unauthorized access, bypass security controls, and retrieve sensitive data like flags.\n* **Digital Forensics:** Conducting forensic analysis on various file types, including network packet captures (PCAP), disk images (AD1), and multimedia files. This includes data carving, metadata analysis (EXIF), steganography, and log analysis.\n* **Cryptography:** Solving cryptographic puzzles by recognizing and reversing various ciphers (Caesar, Atbash, Vigenère, ROT47) and understanding the weaknesses in cryptographic implementations like flawed RSA key generation.\n* **Tool Proficiency:** Gaining hands-on experience with essential cybersecurity tools such as Burp Suite, curl, Python (for scripting exploits), HxD, FTK Imager, Steghide, Wireshark, NetworkMiner, and various online decoders.\n* **OSINT Techniques:** Applying Open-Source Intelligence methods to gather information from public sources like social media profiles and websites to solve investigation-based challenges."
 },
 {
-  "id": "3D CGA",
+  "id": "3D Graphic",
   "title": "3D Computer Graphics and Animation Project (Ancient Mayan civilization)",
   "description": "A fourth semester project in 3D Computer Graphics and Animation, building a comprehensive 3D environment and animating it using industry-standard tools.",
   "image": "/images/Projects/3DCGA/Maya128pixelNEw.png",
@@ -323,7 +323,7 @@ This project served as a comprehensive introduction to 3D web development, cover
       ]
     }
   ],
-  "category": "3D CGA",
+  "category": "3D Graphic",
   "technologies": [
     "Blender",
     "3D Modeling",

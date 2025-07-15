@@ -171,8 +171,8 @@ const AllProjects = () => {
             case "Mobile Development":
               return project.category === "Mobile App" ||
                      project.category === "Mobile Development";
-            case "3D & Graphics":
-              return project.category === "3D CGA";
+            case "3D & Graphics and Animations":
+              return project.category === "3D CGA" || project.category === "3D Graphic" || project.category === "3D Animation";
             case "Cybersecurity":
               return project.category === "Others" && 
                      (project.id === "CTF" || project.title.toLowerCase().includes("security")) || 

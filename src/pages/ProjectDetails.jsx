@@ -158,7 +158,7 @@ const ProjectDetails = () => {
                     {project.videoTitle || "Project Demonstration"}
                   </h3>
                   <p className="text-white-50 text-sm leading-relaxed">
-                    {project.videoDescription || "Watch the complete demonstration of this project showcasing its features and functionality."}
+                    {project.videoDescription || "Watch the complete demonstration of this project showcasing its features and functionality (a link to the full project details is provided below)."}
                   </p>
                 </div>
               </div>

@@ -184,6 +184,30 @@ const ProjectDetails = () => {
               </div>
             )}
 
+            {/* Dataset Source Section */}
+              {project.datasetSource && (
+                <div className="mb-12">
+                  <h2 className="text-2xl font-semibold mb-6 text-white">{project.datasetSource.title}</h2>
+                  <div className="enhanced-card-border rounded-xl p-8 hover:border-white-50 transition-all duration-300 enhanced-card">
+                    <p 
+                      className="text-white-50 leading-relaxed mb-6"
+                      dangerouslySetInnerHTML={{ __html: parseText(project.datasetSource.description) }}
+                    />
+                    <a 
+                      href={project.datasetSource.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="bg-black-200 hover:bg-white text-white hover:text-[#afa9d3] px-6 py-3 rounded-lg font-medium text-center transition-all duration-300 inline-flex items-center justify-center gap-2 enhanced-card-border hover:border-white group"
+                    >
+                      <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                      View on Kaggle
+                    </a>
+                  </div>
+                </div>
+              )}
+
             {/* Fallback for non-imageGallery format */}
             {!project.imageGallery && (
               <div className="enhanced-card-border rounded-xl p-6 mb-8 hover:border-white-50 transition-all duration-300 group enhanced-card">

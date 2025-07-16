@@ -390,7 +390,7 @@ This project served as a comprehensive introduction to 3D web development, cover
   "video": "/images/Projects/UnityCutscene/RenderedAnimation480.mp4",
   "videoLink": "https://drive.google.com/drive/folders/16L8qtdT-yTroywsc1xXackndqK0BkvY_?usp=sharing",
   "screenshots": [],
-  "details": "This project demonstrates the creation of a complex animated scene within the Unity engine, focusing on bringing a 3D environment to life through scripted and timeline-based animations.\n\n**Vehicle Animation**: Vehicles are animated using C# scripts to control their position and rotation. The wheels' rotation speed is directly tied to the vehicle's movement speed for added realism. Specific vehicles, like a yellow car, an airplane, and a UFO, are controlled via the Timeline to activate at precise moments in the animation.\n\n**Camera and Character Sequencing**: The main camera's movement is directed using the Timeline to create specific animated scenes. Characters' animations are also orchestrated within the Timeline, making them perform actions as the camera focuses on them.\n\n**NPC Management**: Non-player characters (NPCs) are organized into groups to streamline the animation process. Each group is assigned animations, allowing for efficient management of crowd scenes and background characters.\n\n**Asset Credits**: The 3D city assets used in this project were kindly provided by my friend Guido Sijabat, the founder of Buzzy Wizzy Studio."
+  "details": "This project demonstrates the creation of a complex animated scene within the Unity engine, focusing on bringing a 3D environment to life through scripted and timeline-based animations.\n\n**Vehicle Animation**: Vehicles are animated using C# scripts to control their position and rotation. The wheels' rotation speed is directly tied to the vehicle's movement speed for added realism. Specific vehicles, like a yellow car, an airplane, and a UFO, are controlled via the Timeline to activate at precise moments in the animation.\n\n**Camera and Character Sequencing**: The main camera's movement is directed using the Timeline to create specific animated scenes. Characters' animations are also orchestrated within the Timeline, making them perform actions as the camera focuses on them.\n\n**NPC Management**: Non-player characters (NPCs) are organized into groups to streamline the animation process. Each group is assigned animations, allowing for efficient management of crowd scenes and background characters.\n\n**Asset Credits**: The 3D city assets used in this project were kindly provided by my friend Guido Sijabat, the founder of Buzzy Wizzy indie game Studio."
 }, 
 
 // ChurnPredict
@@ -412,8 +412,8 @@ This project served as a comprehensive introduction to 3D web development, cover
     description:
       "An end-to-end machine learning workflow to predict customer churn for a telecom company, enabling proactive customer retention strategies by identifying at-risk customers.",
     demo: "",
-    github: "https://github.com/your-repo/customer-churn-prediction", // Replace with your actual GitHub link
-    report: "/reports/customer_churn_report.pdf", // Optional: Add a path to a detailed report
+    github: "https://github.com/HardInCode/customer-churn-prediction.git", // Replace with your actual GitHub link
+     // Optional: Add a path to a detailed report
     details: `
 This project tackles the critical business problem of customer churn. By leveraging a telecommunications dataset, I developed a machine learning model to predict which customers are likely to leave. The solution provides actionable insights that can help the business reduce revenue loss by implementing targeted retention campaigns.
 
@@ -492,24 +492,24 @@ Each dot represents a customer. Red dots indicate high feature values, and blue 
       title: "Dataset Source",
       description: "The dataset used for this project is the Telco Customer Churn dataset, sourced from Kaggle.",
       link: "https://www.kaggle.com/datasets/blastchar/telco-customer-churn"
-    },
-    keyFindings: {
-      title: "Key Findings",
-      findings: [
-        "The final XGBoost model achieved an **accuracy of 77%** on the test set.",
-        "The model's **recall for predicting churn was 66%**, meaning it successfully identified two-thirds of the customers who were at risk of leaving.",
-        "The most important features for predicting churn were found to be **Contract Type (Month-to-month), Tenure, and Internet Service (Fiber optic)**."
-      ]
-    },
-    futureImprovements: {
-      title: "Future Improvements",
-      improvements: [
-        "Implement real-time prediction capabilities.",
-        "Explore additional feature engineering techniques.",
-        "Test ensemble methods for improved performance.",
-        "Develop a web interface for business users."
-      ]
     }
+    //, keyFindings: {
+    //   title: "Key Findings",
+    //   findings: [
+    //     "The final XGBoost model achieved an **accuracy of 77%** on the test set.",
+    //     "The model's **recall for predicting churn was 66%**, meaning it successfully identified two-thirds of the customers who were at risk of leaving.",
+    //     "The most important features for predicting churn were found to be **Contract Type (Month-to-month), Tenure, and Internet Service (Fiber optic)**."
+    //   ]
+    // },
+    // futureImprovements: {
+    //   title: "Future Improvements",
+    //   improvements: [
+    //     "Implement real-time prediction capabilities.",
+    //     "Explore additional feature engineering techniques.",
+    //     "Test ensemble methods for improved performance.",
+    //     "Develop a web interface for business users."
+    //   ]
+    // }
   },
 ];
 

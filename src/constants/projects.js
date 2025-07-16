@@ -391,7 +391,126 @@ This project served as a comprehensive introduction to 3D web development, cover
   "videoLink": "https://drive.google.com/drive/folders/16L8qtdT-yTroywsc1xXackndqK0BkvY_?usp=sharing",
   "screenshots": [],
   "details": "This project demonstrates the creation of a complex animated scene within the Unity engine, focusing on bringing a 3D environment to life through scripted and timeline-based animations.\n\n**Vehicle Animation**: Vehicles are animated using C# scripts to control their position and rotation. The wheels' rotation speed is directly tied to the vehicle's movement speed for added realism. Specific vehicles, like a yellow car, an airplane, and a UFO, are controlled via the Timeline to activate at precise moments in the animation.\n\n**Camera and Character Sequencing**: The main camera's movement is directed using the Timeline to create specific animated scenes. Characters' animations are also orchestrated within the Timeline, making them perform actions as the camera focuses on them.\n\n**NPC Management**: Non-player characters (NPCs) are organized into groups to streamline the animation process. Each group is assigned animations, allowing for efficient management of crowd scenes and background characters.\n\n**Asset Credits**: The 3D city assets used in this project were kindly provided by my friend Guido Sijabat, the founder of Buzzy Wizzy Studio."
-}
+}, 
+
+// ChurnPredict
+{
+    id: "ChurnPredict",
+    title: "Customer Churn Prediction",
+    category: "Machine Learning",
+    image: "/images/Projects/customer-churn/churn-hero.png",
+    technologies: [
+      "Python",
+      "Pandas",
+      "Scikit-learn",
+      "XGBoost",
+      "Matplotlib",
+      "Seaborn",
+      "SHAP",
+      "Jupyter Notebook",
+    ],
+    description:
+      "An end-to-end machine learning workflow to predict customer churn for a telecom company, enabling proactive customer retention strategies by identifying at-risk customers.",
+    demo: "",
+    github: "https://github.com/your-repo/customer-churn-prediction", // Replace with your actual GitHub link
+    report: "/reports/customer_churn_report.pdf", // Optional: Add a path to a detailed report
+    details: `
+This project tackles the critical business problem of customer churn. By leveraging a telecommunications dataset, I developed a machine learning model to predict which customers are likely to leave. The solution provides actionable insights that can help the business reduce revenue loss by implementing targeted retention campaigns.
+
+The project follows a structured, multi-stage machine learning workflow, starting from initial data exploration and ending with in-depth model evaluation and interpretation. The final model, an **XGBoost Classifier**, was selected for its strong performance on this classification problem.
+    `,
+    imageGallery: [
+      {
+        src: "/images/Projects/customer-churn/churn-hero.png",
+        title: "Understanding the Target: Churn Distribution",
+        description: `The first step in any classification problem is to understand the target variable. The initial analysis revealed a class imbalance: **73.5% of customers did not churn**, while **26.5% did**. This is a crucial finding, as it means the model could become biased towards predicting the majority class (No Churn). This insight directly influenced the decision to use **SMOTE (Synthetic Minority Over-sampling Technique)** during the training phase to create a more balanced dataset, ensuring the model learns to identify churners effectively.`,
+        features: [
+          "**Target Variable:** 'Churn' (Yes/No)",
+          "**Imbalance:** Fewer 'Yes' samples make prediction challenging.",
+          "**Strategy:** Use SMOTE to balance the training data.",
+          "**Visualization:** Bar and pie charts provide a clear view of the distribution.",
+        ],
+      },
+      {
+        src: "/images/Projects/customer-churn/churn-preprocessing.png",
+        title: "Data Preprocessing and Feature Engineering",
+        description: `Raw data is rarely ready for modeling. This stage involved cleaning and transforming the data to create a robust set of features. The *TotalCharges* column had missing values for new customers (0 tenure), which were imputed. Categorical features like 'Yes'/'No' were converted to \`1\`s and \`0\`s.
+
+More importantly, **feature engineering** was performed to create more predictive signals. For instance, I created 'TotalServices' to count the number of services a customer uses and 'CustomerValue' from existing columns. Finally, all numerical features were scaled to ensure they contributed equally to the model's learning process.`,
+        features: [
+          "**Data Cleaning:** Handled missing values in 'TotalCharges'.",
+          "**Encoding:** Converted text-based categories into numbers.",
+          "**Feature Creation:** Engineered new features like 'TotalServices' and 'CustomerValue'.",
+          "**Scaling:** Applied StandardScaler to normalize numerical features.",
+        ],
+      },
+      {
+        src: "/images/Projects/customer-churn/churn-training.png",
+        title: "Model Training and Performance Comparison",
+        description: `With a clean dataset, the next step was to train and compare several machine learning models. To address the class imbalance, **SMOTE** was applied to the training data. I evaluated three different classifiers:
+        - *Logistic Regression*
+        - *Random Forest*
+        - *XGBoost*
+
+After training, **XGBoost** emerged as the top-performing model, demonstrating the best balance of precision and recall for predicting churn, as indicated by its superior F1-Score and overall accuracy.`,
+        features: [
+          "**Models:** Logistic Regression, Random Forest, XGBoost.",
+          "**Resampling:** SMOTE applied only to the training set to prevent data leakage.",
+          "**Evaluation:** Models were compared based on accuracy, precision, recall, and F1-score.",
+          "**Best Model:** XGBoost was selected for its superior performance on the churn class.",
+        ],
+      },
+      {
+        src: "/images/Projects/customer-churn/churn-importance.png",
+        title: "Model Evaluation and Feature Importance",
+        description: `Once the best model (XGBoost) was selected, I performed a deeper evaluation. The **ROC curve** showed a high Area Under the Curve (AUC) of **0.83**, indicating a strong ability to distinguish between churning and non-churning customers.
+
+The **feature importance** plot revealed the key drivers of churn. As expected, the **contract type** was the most influential factor, with month-to-month customers being far more likely to churn. Other critical factors included **tenure**, **total charges**, and the type of **internet service**.`,
+        features: [
+          "**Performance:** ROC-AUC score of 0.83.",
+          "**Key Driver:** 'Contract_Month-to-month' is the most significant predictor of churn.",
+          "**Other Factors:** 'tenure', 'TotalCharges', and 'InternetService_Fiber optic' are highly influential.",
+          "**Insight:** This analysis provides the business with clear targets for retention efforts.",
+        ],
+      },
+      {
+        src: "/images/Projects/customer-churn/churn-shap.png",
+        title: "Advanced Interpretation with SHAP",
+        description: `To understand the 'why' behind the model's predictions for individual customers, I used **SHAP (SHapley Additive exPlanations)**. The beeswarm plot provides a powerful visualization of feature impact.
+
+Each dot represents a customer. Red dots indicate high feature values, and blue dots indicate low values. The plot shows how these values 'push' the model's prediction. For example, a low **tenure** (blue dots on the left) has a high positive SHAP value, strongly pushing the prediction towards churn. This level of detail is invaluable for explaining model behavior to stakeholders.`,
+        features: [
+          "**Interpretability:** SHAP explains the impact of each feature on individual predictions.",
+          "**Tenure Impact:** Low tenure is a strong indicator of churn.",
+          "**Contract Impact:** Two-year contracts significantly reduce the likelihood of churn.",
+          "**Actionable Insights:** Helps explain *why* a customer is at risk, beyond just *if*.",
+        ],
+      },
+    ],
+    // New sections added from your README
+    datasetSource: {
+      title: "Dataset Source",
+      description: "The dataset used for this project is the Telco Customer Churn dataset, sourced from Kaggle.",
+      link: "https://www.kaggle.com/datasets/blastchar/telco-customer-churn"
+    },
+    keyFindings: {
+      title: "Key Findings",
+      findings: [
+        "The final XGBoost model achieved an **accuracy of 77%** on the test set.",
+        "The model's **recall for predicting churn was 66%**, meaning it successfully identified two-thirds of the customers who were at risk of leaving.",
+        "The most important features for predicting churn were found to be **Contract Type (Month-to-month), Tenure, and Internet Service (Fiber optic)**."
+      ]
+    },
+    futureImprovements: {
+      title: "Future Improvements",
+      improvements: [
+        "Implement real-time prediction capabilities.",
+        "Explore additional feature engineering techniques.",
+        "Test ensemble methods for improved performance.",
+        "Develop a web interface for business users."
+      ]
+    }
+  },
 ];
 
 export default projects;

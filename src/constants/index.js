@@ -257,7 +257,7 @@ const projectCategories = [
   "Web Development", 
   "Mobile Development",  
   "3D & Graphics and Animations",
-  "AI and Automation"    
+  "AI and Machine Learning"    
 ];
 
 import projects from "./projects";

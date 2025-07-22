@@ -72,6 +72,101 @@ The application uses React Native with Expo for cross-platform compatibility, en
 The interface prioritizes speed and ease of use, with large touch-friendly buttons and clear visual feedback. The design follows material design principles while maintaining brand consistency.`,
   },
 
+  // CTF
+  {
+    "id": "CTF",
+    "title": "Capture The Flag Competition",
+    "description": "An inter-class cyber competition for a total of 3 classes, held by lecturers in semester 5. This document is a detailed writeup from a team at President University for the Ethical Hacking & Digital Forensic Class of 2025.",
+    "image": "/images/Projects/CTF/FuturisticCTF.png",
+    "imageGallery": [
+        {
+            "src": "/images/Projects/CTF/Challanges.png",
+            "title": "CTF Challenges",
+            "description": "The competition featured a wide array of challenges across several categories: Web, OSINT, Miscellaneous, Cryptography, and Forensics.",
+            "features": [
+                null
+            ]
+        },
+    ],
+    "category": "Cybersecurity Competition",
+    "technologies": [
+        "Web",
+        "OSINT",
+        "Miscellaneous",
+        "Cryptography",
+        "Forensic"
+    ],
+    "report": "https://drive.google.com/file/d/1aNfOrVnCUKm1XGdz1nOBT-btBp6DtP9l/view?usp=sharing",
+    "screenshots": [],
+    "details": "details\n\n**CTF Categories**\n\n* **Web:** gottagofast, Homie, broken-eh, Library, Ding-dong, Travelcon, Qr-generator, Pdfgenerator, Recruitprogrammer, Pet-donation, Nopasswd, Reader-Reader\n* **OSINT:** namejumpheadbang, Find My Friend, My Favourite\n* **Cryptography:** supposedly-easy, XORry, Vinegar, Rizz Me Up, Triple Threat\n* **Miscellaneous:** My Fav Intro, New-Schedule, LastMessage\n* **Forensic:** Color-theory, Scout Code, Binbasecii, Nightmare, Mailer, Latte, Chameleon, lost-da-important-fil3, TripleThreat2, Gotta-fix-the-corruption\n\n**Learning Objectives:**\nThis CTF challenge was designed to increase and test a wide range of cyberskills, providing practical experience in:\n\n* **Vulnerability Analysis:** Identifying and understanding security flaws such as SQL Injection, Command Injection, JWT 'alg=none' vulnerability, Integer Overflow, and insecure file/directory permissions.\n* **Exploitation:** Actively exploiting vulnerabilities using manual techniques and specialized tools to gain unauthorized access, bypass security controls, and retrieve sensitive data like flags.\n* **Digital Forensics:** Conducting forensic analysis on various file types, including network packet captures (PCAP), disk images (AD1), and multimedia files. This includes data carving, metadata analysis (EXIF), steganography, and log analysis.\n* **Cryptography:** Solving cryptographic puzzles by recognizing and reversing various ciphers (Caesar, Atbash, Vigenère, ROT47) and understanding the weaknesses in cryptographic implementations like flawed RSA key generation.\n* **Tool Proficiency:** Gaining hands-on experience with essential cybersecurity tools such as Burp Suite, curl, Python (for scripting exploits), HxD, FTK Imager, Steghide, Wireshark, NetworkMiner, and various online decoders.\n* **OSINT Techniques:** Applying Open-Source Intelligence methods to gather information from public sources like social media profiles and websites to solve investigation-based challenges."
+},
+{
+  "id": "3D Graphic",
+  "title": "3D Computer Graphics and Animation Project (Ancient Mayan civilization)",
+  "description": "A fourth semester project in 3D Computer Graphics and Animation, building a comprehensive 3D environment and animating it using industry-standard tools.",
+  "image": "/images/Projects/3DCGA/Maya128pixelNEw.png",
+  "imageGallery": [
+    {
+      "src": "/images/Projects/3DCGA/Maya128pixelNEw.png",
+      "title": "Final Rendered Scene",
+      "description": "The final composition of the Mayan Civilization scene, showcasing the environment, characters, and atmospheric lighting. This image represents the culmination of all modeling, texturing, and lighting work.",
+      "features": [
+        "Dynamic lighting with a prominent full moon",
+        "Dense, low-poly jungle environment",
+        "Character interaction around a central campfire",
+        "A distant pyramid adding depth to the scene"
+      ]
+    },
+    {
+        "src": "/images/Projects/3DCGA/MyFirstAssets.png",
+        "title": "Environment and Prop Assets",
+        "description": "A showcase of the custom-made, low-poly assets created for the project. This collection includes various types of trees, plants, flowers, rocks, and logs used to build the final scene.",
+        "features": [
+          "Manually modeled trees, flowers, grasses, and rocks.",
+          "Randomized flower colors using Blender's 'Object Info' and 'Color Ramp' nodes.",
+          "All assets designed to fit a consistent low-poly aesthetic."
+        ]
+    },
+    {
+        "src": "/images/Projects/3DCGA/Characters128.png",
+        "title": "Character Models Showcase",
+        "description": "A lineup of the character models in their T-pose, displaying the base meshes and the custom-designed clothing and accessories before rigging and animation.",
+        "features": [
+          "Separate human body templates for male and female characters.",
+          "Accessories created by duplicating and sculpting faces from the base model.",
+          "Use of 'Solidify' and 'Mirror' modifiers for efficient modeling."
+        ]
+    },
+    {
+      "src": "/images/Projects/3DCGA/XaltheonRunningAnim0001-0060.mp4",
+      "type": "video",
+      "title": "Character Animation Reel",
+      "description": "A demonstration of the character animation, including idle, walk, and run cycles for the main character, Xaltheon. This reel highlights the rigging and keyframing work.",
+      "features": [
+        "Smooth character and camera animations",
+        "Object transformations and keyframing",
+        "Dynamic lighting that interacts with the moving character",
+        "Professional rendering quality for animated sequences"
+      ]
+    }
+  ],
+  "category": "3D Graphic",
+  "technologies": [
+    "Blender",
+    "3D Modeling",
+    "3D Animation",
+    "Rendering",
+    "Lighting Design",
+    "Texture Mapping"
+  ],
+  "report": "https://docs.google.com/document/d/1cFPc_njY2SGSlIt0Oa6zD9tiWajKFcVI/edit?usp=sharing&ouid=103671008663272847110&rtpof=true&sd=true",
+  "video": "/images/Projects/3DCGA/MayanCivilizationFreeAnimation.mp4",
+  "videoLink": "https://drive.google.com/drive/folders/1NrUQbW_tU2ygDTtJveSTKlPjmvbp2Joq?usp=sharing",
+  "screenshots": [],
+  "details": "This project, titled \"Mayan Civilization,\" was developed for a fourth-semester course in 3D Computer Graphics and Animation at President University. The goal was to create a complete 3D environment from scratch, featuring custom models, detailed texturing, atmospheric lighting, and full animation sequences. The project was a collaborative effort by Ahmad Akbar Sidiq, Athaillah Dea Arkananta, Hardin Irfan, and Putra Ananta Darmawan.\n\n**Background Story**\nThe narrative follows Xaltheon, an Aztec-born warrior orphaned during the Spanish conquest. Haunted by his past, he escapes into the jungle where he forges an unbreakable bond with an ocelot named Tecu after saving him from a trap. Xaltheon eventually finds refuge in a Mayan kingdom, though his heart remains hardened by loss. His life changes when he befriends the young Mayan prince, Kaan. They train together, and as Kaan ascends to the throne, he makes Xaltheon his most trusted warrior, gifting him the sacred spear, Astraeus. Now, Xaltheon serves his king with unmatched, merciless strength, his true intentions a mystery to all.\n\n**Character Profiles**\n* **Xaltheon**: The main character, a mysterious and quiet Mayan warrior who hides his face behind a mask. He is the king's most loyal warrior, respected for his strength and focus.\n* **Tecu**: Xaltheon's ocelot companion. While he appears as a normal ocelot, he can transform into a fierce, powerful creature when Xaltheon is in danger.\n* **Kaan**: The wise and brave king of the Mayan kingdom. He is a skilled leader and fighter who shares a deep, unbreakable friendship with Xaltheon.\n* **Astraeus**: A divine spear forged by the gods that channels the energy of the stars, granting its wielder immense power and agility.\n\n**Technical Implementation**\nThe entire 3D scene was built using Blender, with a focus on a low-poly art style.\n\n* **Modeling & Landscaping:** All environmental assets, including trees, flowers, grass, rocks, and buildings (huts, pyramids, statues), were modeled from scratch. These assets were placed manually to create the landscape. The low-poly ground was created by subdividing a plane and using 'Solidify' and 'Bevel' modifiers, then randomly moving vertices along the Z-axis.\n* **Character Modeling:** The team first created male and female human body templates. Clothes and accessories were designed by selecting faces on the body, duplicating them, and sculpting them into the desired shape using 'Solidify' and 'Mirror' modifiers for thickness and symmetry.\n* **Materials & Special Effects:** The fire effect was achieved using a particle system configured to emit cube particles with an emission color. For texturing, standard BSDF colors were used, with gradients on some elements and metallic effects for jewelry. A 'Color Ramp' node connected to an 'Object Info' node was used to generate random colors for duplicated objects like flowers and leaves. The sky and clouds were generated using the 'Dynamic Sky' addon.\n\n**Learning Outcomes**\nThe team gained significant experience with Blender, becoming more familiar with shortcuts, material creation, rigging, and animation techniques like keyframing. The main challenge was coordination and maintaining focus during group work sessions."
+},
+
+
 
 // PW analyzer
   {
@@ -244,100 +339,6 @@ All analysis is performed client-side with no data transmission, ensuring comple
 **Learning Objectives:**
 This project served as a comprehensive introduction to 3D web development, covering model optimization, lighting techniques, and performance considerations for browser-based 3D applications.`,
   },
-
-// CTF
-  {
-    "id": "CTF",
-    "title": "Capture The Flag Competition",
-    "description": "An inter-class cyber competition for a total of 3 classes, held by lecturers in semester 5. This document is a detailed writeup from a team at President University for the Ethical Hacking & Digital Forensic Class of 2025.",
-    "image": "/images/Projects/CTF/FuturisticCTF.png",
-    "imageGallery": [
-        {
-            "src": "/images/Projects/CTF/Challanges.png",
-            "title": "CTF Challenges",
-            "description": "The competition featured a wide array of challenges across several categories: Web, OSINT, Miscellaneous, Cryptography, and Forensics.",
-            "features": [
-                null
-            ]
-        },
-    ],
-    "category": "Cybersecurity Competition",
-    "technologies": [
-        "Web",
-        "OSINT",
-        "Miscellaneous",
-        "Cryptography",
-        "Forensic"
-    ],
-    "report": "https://drive.google.com/file/d/1aNfOrVnCUKm1XGdz1nOBT-btBp6DtP9l/view?usp=sharing",
-    "screenshots": [],
-    "details": "details\n\n**CTF Categories**\n\n* **Web:** gottagofast, Homie, broken-eh, Library, Ding-dong, Travelcon, Qr-generator, Pdfgenerator, Recruitprogrammer, Pet-donation, Nopasswd, Reader-Reader\n* **OSINT:** namejumpheadbang, Find My Friend, My Favourite\n* **Cryptography:** supposedly-easy, XORry, Vinegar, Rizz Me Up, Triple Threat\n* **Miscellaneous:** My Fav Intro, New-Schedule, LastMessage\n* **Forensic:** Color-theory, Scout Code, Binbasecii, Nightmare, Mailer, Latte, Chameleon, lost-da-important-fil3, TripleThreat2, Gotta-fix-the-corruption\n\n**Learning Objectives:**\nThis CTF challenge was designed to increase and test a wide range of cyberskills, providing practical experience in:\n\n* **Vulnerability Analysis:** Identifying and understanding security flaws such as SQL Injection, Command Injection, JWT 'alg=none' vulnerability, Integer Overflow, and insecure file/directory permissions.\n* **Exploitation:** Actively exploiting vulnerabilities using manual techniques and specialized tools to gain unauthorized access, bypass security controls, and retrieve sensitive data like flags.\n* **Digital Forensics:** Conducting forensic analysis on various file types, including network packet captures (PCAP), disk images (AD1), and multimedia files. This includes data carving, metadata analysis (EXIF), steganography, and log analysis.\n* **Cryptography:** Solving cryptographic puzzles by recognizing and reversing various ciphers (Caesar, Atbash, Vigenère, ROT47) and understanding the weaknesses in cryptographic implementations like flawed RSA key generation.\n* **Tool Proficiency:** Gaining hands-on experience with essential cybersecurity tools such as Burp Suite, curl, Python (for scripting exploits), HxD, FTK Imager, Steghide, Wireshark, NetworkMiner, and various online decoders.\n* **OSINT Techniques:** Applying Open-Source Intelligence methods to gather information from public sources like social media profiles and websites to solve investigation-based challenges."
-},
-{
-  "id": "3D Graphic",
-  "title": "3D Computer Graphics and Animation Project (Ancient Mayan civilization)",
-  "description": "A fourth semester project in 3D Computer Graphics and Animation, building a comprehensive 3D environment and animating it using industry-standard tools.",
-  "image": "/images/Projects/3DCGA/Maya128pixelNEw.png",
-  "imageGallery": [
-    {
-      "src": "/images/Projects/3DCGA/Maya128pixelNEw.png",
-      "title": "Final Rendered Scene",
-      "description": "The final composition of the Mayan Civilization scene, showcasing the environment, characters, and atmospheric lighting. This image represents the culmination of all modeling, texturing, and lighting work.",
-      "features": [
-        "Dynamic lighting with a prominent full moon",
-        "Dense, low-poly jungle environment",
-        "Character interaction around a central campfire",
-        "A distant pyramid adding depth to the scene"
-      ]
-    },
-    {
-        "src": "/images/Projects/3DCGA/MyFirstAssets.png",
-        "title": "Environment and Prop Assets",
-        "description": "A showcase of the custom-made, low-poly assets created for the project. This collection includes various types of trees, plants, flowers, rocks, and logs used to build the final scene.",
-        "features": [
-          "Manually modeled trees, flowers, grasses, and rocks.",
-          "Randomized flower colors using Blender's 'Object Info' and 'Color Ramp' nodes.",
-          "All assets designed to fit a consistent low-poly aesthetic."
-        ]
-    },
-    {
-        "src": "/images/Projects/3DCGA/Characters128.png",
-        "title": "Character Models Showcase",
-        "description": "A lineup of the character models in their T-pose, displaying the base meshes and the custom-designed clothing and accessories before rigging and animation.",
-        "features": [
-          "Separate human body templates for male and female characters.",
-          "Accessories created by duplicating and sculpting faces from the base model.",
-          "Use of 'Solidify' and 'Mirror' modifiers for efficient modeling."
-        ]
-    },
-    {
-      "src": "/images/Projects/3DCGA/XaltheonRunningAnim0001-0060.mp4",
-      "type": "video",
-      "title": "Character Animation Reel",
-      "description": "A demonstration of the character animation, including idle, walk, and run cycles for the main character, Xaltheon. This reel highlights the rigging and keyframing work.",
-      "features": [
-        "Smooth character and camera animations",
-        "Object transformations and keyframing",
-        "Dynamic lighting that interacts with the moving character",
-        "Professional rendering quality for animated sequences"
-      ]
-    }
-  ],
-  "category": "3D Graphic",
-  "technologies": [
-    "Blender",
-    "3D Modeling",
-    "3D Animation",
-    "Rendering",
-    "Lighting Design",
-    "Texture Mapping"
-  ],
-  "report": "https://docs.google.com/document/d/1cFPc_njY2SGSlIt0Oa6zD9tiWajKFcVI/edit?usp=sharing&ouid=103671008663272847110&rtpof=true&sd=true",
-  "video": "/images/Projects/3DCGA/MayanCivilizationFreeAnimation.mp4",
-  "videoLink": "https://drive.google.com/drive/folders/1NrUQbW_tU2ygDTtJveSTKlPjmvbp2Joq?usp=sharing",
-  "screenshots": [],
-  "details": "This project, titled \"Mayan Civilization,\" was developed for a fourth-semester course in 3D Computer Graphics and Animation at President University. The goal was to create a complete 3D environment from scratch, featuring custom models, detailed texturing, atmospheric lighting, and full animation sequences. The project was a collaborative effort by Ahmad Akbar Sidiq, Athaillah Dea Arkananta, Hardin Irfan, and Putra Ananta Darmawan.\n\n**Background Story**\nThe narrative follows Xaltheon, an Aztec-born warrior orphaned during the Spanish conquest. Haunted by his past, he escapes into the jungle where he forges an unbreakable bond with an ocelot named Tecu after saving him from a trap. Xaltheon eventually finds refuge in a Mayan kingdom, though his heart remains hardened by loss. His life changes when he befriends the young Mayan prince, Kaan. They train together, and as Kaan ascends to the throne, he makes Xaltheon his most trusted warrior, gifting him the sacred spear, Astraeus. Now, Xaltheon serves his king with unmatched, merciless strength, his true intentions a mystery to all.\n\n**Character Profiles**\n* **Xaltheon**: The main character, a mysterious and quiet Mayan warrior who hides his face behind a mask. He is the king's most loyal warrior, respected for his strength and focus.\n* **Tecu**: Xaltheon's ocelot companion. While he appears as a normal ocelot, he can transform into a fierce, powerful creature when Xaltheon is in danger.\n* **Kaan**: The wise and brave king of the Mayan kingdom. He is a skilled leader and fighter who shares a deep, unbreakable friendship with Xaltheon.\n* **Astraeus**: A divine spear forged by the gods that channels the energy of the stars, granting its wielder immense power and agility.\n\n**Technical Implementation**\nThe entire 3D scene was built using Blender, with a focus on a low-poly art style.\n\n* **Modeling & Landscaping:** All environmental assets, including trees, flowers, grass, rocks, and buildings (huts, pyramids, statues), were modeled from scratch. These assets were placed manually to create the landscape. The low-poly ground was created by subdividing a plane and using 'Solidify' and 'Bevel' modifiers, then randomly moving vertices along the Z-axis.\n* **Character Modeling:** The team first created male and female human body templates. Clothes and accessories were designed by selecting faces on the body, duplicating them, and sculpting them into the desired shape using 'Solidify' and 'Mirror' modifiers for thickness and symmetry.\n* **Materials & Special Effects:** The fire effect was achieved using a particle system configured to emit cube particles with an emission color. For texturing, standard BSDF colors were used, with gradients on some elements and metallic effects for jewelry. A 'Color Ramp' node connected to an 'Object Info' node was used to generate random colors for duplicated objects like flowers and leaves. The sky and clouds were generated using the 'Dynamic Sky' addon.\n\n**Learning Outcomes**\nThe team gained significant experience with Blender, becoming more familiar with shortcuts, material creation, rigging, and animation techniques like keyframing. The main challenge was coordination and maintaining focus during group work sessions."
-},
 
 
 // Unityanim

@@ -226,7 +226,7 @@ const expCards = [
     date: "October 2022 - November 2022",
     responsibilities: [
       "Accurately processed and recorded new customerservice orders for IndiHome products (WiFi, TV) into the company database.",
-      "Managed the status of over 200 customer records monthly, ensuring a seamless progression from initial request to the technicalinstallation phase.",
+      "Managed the status of over 200 customer records monthly, ensuring a seamless progression from initial request to the technical installation phase.",
       "Maintained high levels of data integrity to prevent discrepancies and support efficient hand-offs to field technician teams."
     ],
   },

@@ -410,7 +410,7 @@ This project served as a comprehensive introduction to 3D web development, cover
       "Jupyter Notebook",
     ],
     description:
-      "An end-to-end machine learning workflow to predict customer churn for a telecom company, enabling proactive customer retention strategies by identifying at-risk customers.",
+      "A machine learning workflow to predict customer churn for a telecom company, enabling proactive customer retention strategies by identifying at-risk customers.",
     demo: "",
     github: "https://github.com/HardInCode/customer-churn-prediction.git", // Replace with your actual GitHub link
      // Optional: Add a path to a detailed report

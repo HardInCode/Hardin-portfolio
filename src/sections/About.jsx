@@ -188,16 +188,16 @@ const About = () => {
                   Python Development
                 </div>
                 <div className="bg-[#1a1a1a] px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-full text-white text-xs sm:text-sm md:text-base whitespace-nowrap">
-                  Cybersecurity Analysis
-                </div>
-                <div className="bg-[#1a1a1a] px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-full text-white text-xs sm:text-sm md:text-base whitespace-nowrap">
-                  SQL Database Management
+                  Cybersecurity Analysist
                 </div>
                 <div className="bg-[#1a1a1a] px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-full text-white text-xs sm:text-sm md:text-base whitespace-nowrap">
                   Web Security Testing
                 </div>
                 <div className="bg-[#1a1a1a] px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-full text-white text-xs sm:text-sm md:text-base whitespace-nowrap">
                   Network Architecture
+                </div>
+                <div className="bg-[#1a1a1a] px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-full text-white text-xs sm:text-sm md:text-base whitespace-nowrap">
+                  SQL Database Management
                 </div>
               </div>
             </div>

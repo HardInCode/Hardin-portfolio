@@ -168,10 +168,10 @@ const techStackIcons = [
     rotation: [0, 0, 0],
   },
   {
-    name: "Backend Developer",
-    modelPath: "/models/node-transformed.glb",
-    scale: 5,
-    rotation: [0, -Math.PI / 2, 0],
+    name: "Application Support",
+    modelPath: "/models/DB.glb",
+    scale: 1.3,
+    rotation: [0, 0, 0],
   },
   {
     name: "Security Tester",
@@ -195,15 +195,16 @@ const techStackIcons = [
 // Your work history with detailed descriptions, responsibilities, and company info
 const expCards = [
   {
-    review: "My Creativity and teamwork shone in the Buzzy Wizzy Studio community, where he contributed to innovative game development projects and fostered a collaborative spirit.",
-    imgPath: "/images/BW.png",
-    logoPath: "/images/logos/BW.png",
-    title: "Game Developer, Buzzy Wizzy Studio (Campus GameDev Community)",
-    date: "October 2024 - Present",
+    review: "My analytical and communication skills were central to my role at Accelist Lentera Indonesia, where I provided IT application support for a major automotive client, PT. Toyota Astra Motor. I performed system troubleshooting and collaborated closely with developers on issue resolution.",
+    imgPath: "/images/logos/Accelist.png",
+    logoPath: "/images/logos/Accelist.png",
+    title: "Internship IT Application Support, PT. Accelist Lentera Sejahtera Indonesia",
+    date: "August 2025 - Present",
     responsibilities: [
-      "Collaborated with fellow students to design and develop engaging game prototypes using Unity.",
-      "Participated in brainstorming sessions, contributing creative ideas for gameplay mechanics and storylines.",
-      "Assist in building 3D environments and become an animation team leader."
+      "Providing 24/7 operational support for a critical business application for the client, PT. Toyota Astra Motor.",
+      "Working in shift to ensure constant availability and immediate responseto application issues.",
+      "Managing and respondingto user assistance requests through a formal ticketing system.",
+      "Performing root cause analysis to identify various user reported problems, ranging from database issues to application bugs."
     ],
   },
   {
@@ -222,7 +223,7 @@ const expCards = [
     review: "Excelled as a Customer Data Coordinator, demonstrating strong organizational skills and attention to detail in managing large datasets and supporting customer operations.",
     imgPath: "/images/telkom.png",
     logoPath: "/images/logos/telkom.png",
-    title: "Customer Data Coordinator, PT Telkom Indonesia Gresik",
+    title: "Internship Customer Data Coordinator, PT Telkom Indonesia Gresik",
     date: "October 2022 - November 2022",
     responsibilities: [
       "Accurately processed and recorded new customerservice orders for IndiHome products (WiFi, TV) into the company database.",

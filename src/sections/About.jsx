@@ -163,11 +163,11 @@ const About = () => {
                 - Better line height for readability
               */}
               <p className="text-white-50 text-sm sm:text-base md:text-lg mb-3 md:mb-4 text-justify leading-relaxed">
-                I believe that the best technology is built with more than just code; it is built with foresight. As an Information Technology student at President University, my approach is driven by a blend of analytical thinking and strong technical intuition. This allows me to not only solve the problem at hand, but also to foresee potential future obstacles and opportunities.
+                I believe that the best technology is not only built with code, but also with a vision for the future. As an Information Technology student at President University, my approach is driven by a combination of analytical thinking and strong technical intuition. This allows me not only to solve existing problems, but also to predict potential obstacles and opportunities in the future.
               </p>
               
               <p className="text-white-50 text-sm sm:text-base md:text-lg mb-3 md:mb-4 text-justify leading-relaxed">
-                My passion lies in using these insights to develop secure and engaging web experiences. By combining creative strategies with the principles of cybersecurity and web development, I aim to create solutions that are not only technically sound, but also truly intelligent and built for the future.
+                My passion lies in using my knowledge of information technology to develop into a versatile person in this modern era. By combining creative strategies with cybersecurity principles, I strive to create solutions that are not only technically sound, but also truly intelligent and designed for the future.
               </p>
               
               {/* 
@@ -191,7 +191,7 @@ const About = () => {
                   Cybersecurity Analysist
                 </div>
                 <div className="bg-[#1a1a1a] px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-full text-white text-xs sm:text-sm md:text-base whitespace-nowrap">
-                  Web Security Testing
+                  IT Support
                 </div>
                 <div className="bg-[#1a1a1a] px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-full text-white text-xs sm:text-sm md:text-base whitespace-nowrap">
                   Network Architecture
